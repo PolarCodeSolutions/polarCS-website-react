@@ -24,10 +24,11 @@ export default function Home() {
       <Hero />
       <Features />
       <Brands />
-      <Testimonials />
       <Pricing />
-      <Blog />
       <Contact />
     </>
   );
 }
+
+//<Testimonials />
+//<Blog />

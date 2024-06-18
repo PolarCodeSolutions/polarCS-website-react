@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Hva vi gjør"
-            paragraph="Vi tilbyr en rekke tjenester som dekker alle dine behov innen webutvikling og programvare."
+            title="Våre tjenester"
+            paragraph="Vi tilbyr en rekke løsninger som dekker alle dine behov innen webutvikling og programvare."
             center
           />
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">

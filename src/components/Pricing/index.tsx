@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Enkel og forutsigbar pris på webhosting"
+          paragraph="Velg en plan som passer best for deg og dine behov."
           center
           width="665px"
         />
@@ -27,7 +27,7 @@ const Pricing = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              Monthly
+              Måned
             </span>
             <div
               onClick={() => setIsMonthly(!isMonthly)}
@@ -52,7 +52,7 @@ const Pricing = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              Yearly
+              År
             </span>
           </div>
         </div>
@@ -60,42 +60,45 @@ const Pricing = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            price={isMonthly ? "449" : "4995"}
+            duration={isMonthly ? "mnd" : "år"}
+            subtitle="Support avtale for små bedrifter og enkeltmannsforetak."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+          <OfferList text="Nettstedshosting" status="active" />
+          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Live support" status="inactive" />
+          <OfferList text="Kommersiell bruk" status="active" />
+          <OfferList text="E-postsupport" status="active" />
+          <OfferList text="Prioritert support" status="inactive" />
+          <OfferList text="Gratis livstidsoppdateringer" status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            price={isMonthly ? "695" : "7899"}
+            duration={isMonthly ? "mnd" : "år"}
+            subtitle="support avtale for små og mellomstore bedrifter, inkludert enkel support."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+          <OfferList text="Nettstedshosting" status="active" />
+          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Live support" status="active" />
+          <OfferList text="Kommersiell bruk" status="active" />
+          <OfferList text="E-postsupport" status="active" />
+          <OfferList text="Prioritert support" status="inactive" />
+          <OfferList text="Gratis livstidsoppdateringer" status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            price={isMonthly ? "1105" : "11200"}
+            duration={isMonthly ? "mnd" : "år"}
+            subtitle="Support avtale for store bedrifter og organisasjoner, inkludert prioritert support."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+          <OfferList text="Nettstedshosting" status="active" />
+          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Live support" status="active" />
+          <OfferList text="Kommersiell bruk" status="active" />
+          <OfferList text="E-postsupport" status="active" />
+          <OfferList text="Prioritert support" status="active" />
+          <OfferList text="Gratis livstidsoppdateringer" status="active" />
           </PricingBox>
         </div>
       </div>
