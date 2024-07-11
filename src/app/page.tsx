@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Kode, direkte fra kilden av nordlyset",

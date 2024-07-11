@@ -28,30 +28,41 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                Open Source-utvikling
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Vi tror på kraften i åpen kildekode og ønsker å bidra til fellesskapet ved å dele vår kunnskap og våre løsninger.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                Kvalitet og Innovasjon
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                Ved å bruke de nyeste teknologiene og metodene, sikrer vi at våre produkter og tjenester er pålitelige, sikre og i forkant av teknologiske trender.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                Bygge Langsiktige Partnerskap
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                Vi verdsetter våre kunder og arbeider tett med dem for å forstå deres behov og levere løsninger som overgår forventningene.
                 </p>
+              </div>
+              <div className="mb-1">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                Samarbeid og Læring
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                Vi skaper et miljø hvor våre ansatte og samarbeidspartnere kan vokse og utvikle seg gjennom samarbeid og kontinuerlig læring.                </p>
+              </div>
+              <div className="mb-1">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                Drive Bærekraftig Utvikling
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                Vi er opptatt av å utvikle teknologi som bidrar til en bærekraftig fremtid, både miljømessig og økonomisk. Ved å følge disse prinsippene, håper vi å inspirere og bidra til en teknologisk utvikling som er inkluderende, ansvarlig og fremtidsrettet.                </p>
               </div>
             </div>
           </div>

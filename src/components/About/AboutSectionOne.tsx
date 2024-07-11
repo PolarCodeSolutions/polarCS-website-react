@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Vi leverer bærekraftige løsninger."
+                paragraph="Vi er dedikert til å:"
                 mb="44px"
               />
 
@@ -35,15 +35,14 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Fremme Open Source-utvikling" />
+                    <List text="Levere Kvalitet og Innovasjon" />
+                    <List text="Bygge Langsiktige Partnerskap" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Støtte Samarbeid og Læring" />
+                    <List text="Drive Bærekraftig Utvikling" />
                   </div>
                 </div>
               </div>
