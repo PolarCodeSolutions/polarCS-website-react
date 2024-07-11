@@ -15,9 +15,13 @@ const NewsLatterBox = () => {
       </p>
       <div>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Tlf: +47 950 44 586<br></br>
-        E-post: contact@polarcode.solutions 
-      </p>        
+        Telefon: +47 950 44 586
+    
+      </p>
+      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      E-post: contact@polarcode.solutions 
+        </p>        
+
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           Vi svarer på alle henvendelser vi får.
         </p>
