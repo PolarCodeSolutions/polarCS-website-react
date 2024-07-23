@@ -10,19 +10,19 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Om oss",
-    path: "/about",
+    path: "/om",
     newTab: false,
   },
   {
     id: 33,
     title: "Tjenester",
-    path: "/blog",
+    path: "/tjenester",
     newTab: false,
   },
   {
     id: 3,
     title: "Kontakt oss",
-    path: "/contact",
+    path: "/kontakt",
     newTab: false,
   },
 ];

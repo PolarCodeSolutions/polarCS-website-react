@@ -13,8 +13,8 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Kode, direkte fra kilden av nordlyset",
-  description: "Din lokale webapplikasjons og programvare leverandør.",
+  title: "PolarCode Solutions",
+  description: "Hjemmeside for PolarCode Solutions",
 
 };
 
