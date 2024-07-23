@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Om oss | Informasjon om selskapet",
+  title: "Om oss",
   description: "Denne siden inneholder informasjon om selskapet",
   // other metadata
 };
