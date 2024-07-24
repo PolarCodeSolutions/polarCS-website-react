@@ -6,10 +6,10 @@ const blogData: Blog[] = [
     lenke: "tjenester/webdesign",
     title: "Vi lager nettside for bedriften din",
     paragraph:"Vi tar arbeidet og hjelper med å fremstille en kravspesifikasjon, design og utvikling av nettsiden",
-    image: "/images/blog/blog-01.jpg",
+    image: "/images/tjenester/webdesign.webp",
     author: {
       name: "Morten Sandstedt",
-      image: "/images/blog/author-01.png",
+      image: "/images/blog/morten.png",
       designation: "Frontend designer & utvikler",
     },
     tags: ["webdesign"],
@@ -21,10 +21,10 @@ const blogData: Blog[] = [
     title: "Utvikling av programvare",
     paragraph:
       "Vi utvikler programvare for bedrifter og privatpersoner.",
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/tjenester/programvare.webp",
     author: {
       name: "Asgeir Bjørgen Huskebakk",
-      image: "/images/blog/author-02.png",
+      image: "/images/blog/asgeir.jpg",
       designation: "Programvare ingniør",
     },
     tags: ["software"],
@@ -36,7 +36,7 @@ const blogData: Blog[] = [
     title: "Support og vedlikehold av nettsider og programvare",
     paragraph:
       "Vi tilbyr support og vedlikehold av nettsider og programvare.",
-    image: "/images/blog/blog-03.jpg",
+    image: "/images/tjenester/vedlikehold.webp",
     author: {
       name: "Polar Code Solutions",
       image: "/images/logo/croppedPolarLogo.png",
