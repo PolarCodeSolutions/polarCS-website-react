@@ -65,7 +65,7 @@ const Pricing = () => {
             subtitle="Support avtale for små bedrifter og enkeltmannsforetak."
           >
           <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Domenenavn *" status="active" />
           <OfferList text="Live support" status="inactive" />
           <OfferList text="Kommersiell bruk" status="active" />
           <OfferList text="E-postsupport" status="active" />
@@ -79,7 +79,7 @@ const Pricing = () => {
             subtitle="support avtale for små og mellomstore bedrifter, inkludert enkel support."
           >
           <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Domenenavn *" status="active" />
           <OfferList text="Live support" status="active" />
           <OfferList text="Kommersiell bruk" status="active" />
           <OfferList text="E-postsupport" status="active" />
@@ -93,7 +93,7 @@ const Pricing = () => {
             subtitle="Support avtale for store bedrifter og organisasjoner, inkludert prioritert support."
           >
           <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn" status="active" />
+          <OfferList text="Domenenavn *" status="active" />
           <OfferList text="Live support" status="active" />
           <OfferList text="Kommersiell bruk" status="active" />
           <OfferList text="E-postsupport" status="active" />
