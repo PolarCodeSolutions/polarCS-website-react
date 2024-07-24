@@ -24,7 +24,10 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -37,6 +40,13 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+
+  // Handle link click
+  const handleLinkClick = () => {
+    if (navbarOpen) {
+      setNavbarOpen(false);
+    }
+  };
 
   return (
     <>
@@ -61,9 +71,7 @@ const Header = () => {
                   alt="logo"
                   width={100}
                   height={25}
-                  //className="w-full dark:hidden"
                 />
-
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -104,6 +112,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={handleLinkClick}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
@@ -139,6 +148,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
+                                  onClick={handleLinkClick}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
@@ -153,7 +163,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-
                 <div>
                   <ThemeToggler />
                 </div>

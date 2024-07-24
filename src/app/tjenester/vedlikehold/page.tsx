@@ -85,41 +85,63 @@ const BlogDetailsPage = () => {
                       />
                     </div>
                   </div>
-                  
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                   Hvorfor er vedlikehold viktig for en bedrift?
                   </h3>
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Trykk på overskriftene for å lese mer.
+                  </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Opprettholder driftssikkerhet
-                    Regelmessig vedlikehold sikrer at systemer og programvare fungerer som forventet og reduserer risikoen for nedetid. Dette er avgjørende for å opprettholde en stabil drift og unngå forstyrrelser i virksomheten.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Forhindrer kostbare feil
-                    Ved å oppdage og rette feil tidlig, kan vedlikehold forhindre større problemer som kan føre til dyre reparasjoner eller systemgjenoppretting. Forebygging er ofte langt billigere enn å håndtere konsekvensene av alvorlige feil.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Sikrer sikkerhet
-                    Oppdateringer og sikkerhetsforbedringer er en del av vedlikeholdet, som beskytter mot sårbarheter og trusler. Dette er kritisk for å beskytte sensitive data og forhindre sikkerhetsbrudd som kan skade virksomheten.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Forbedrer ytelse
-                    Regelmessig vedlikehold bidrar til å optimalisere systemets ytelse. Dette kan innebære oppdatering av programvare, rensing av data og justering av systeminnstillinger for å sikre at alt fungerer effektivt og raskt.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Holder programvaren oppdatert
-                    Teknologi utvikler seg raskt, og vedlikehold sikrer at programvaren din er oppdatert med de nyeste funksjonene og forbedringene. Dette gir deg tilgang til de nyeste verktøyene og forbedrer brukeropplevelsen.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Øker levetiden på systemer
-                    Regelmessig vedlikehold kan forlenge levetiden til både programvare og maskinvare. Dette betyr at investeringene dine varer lenger, og du unngår hyppige oppgraderinger og kostnader ved å bytte ut utdaterte systemer.                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Overholder forskrifter
-                    Vedlikehold sørger for at systemer og prosesser overholder gjeldende lover og reguleringer, noe som er spesielt viktig for bransjer med strenge krav til datahåndtering og sikkerhet.                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Forbedrer brukeropplevelsen
-                    Når systemer fungerer feilfritt, er brukeropplevelsen mye bedre. Dette gjelder både for interne ansatte og eksterne kunder. En stabil og responsiv plattform bidrar til økt produktivitet og kundetilfredshet.                    </li>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Opprettholder driftssikkerhet</strong></summary>
+                        Regelmessig vedlikehold sikrer at systemer og programvare fungerer som forventet og reduserer risikoen for nedetid. Dette er avgjørende for å opprettholde en stabil drift og unngå forstyrrelser i virksomheten.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Forhindrer kostbare feil</strong></summary>
+                        Ved å oppdage og rette feil tidlig, kan vedlikehold forhindre større problemer som kan føre til dyre reparasjoner eller systemgjenoppretting. Forebygging er ofte langt billigere enn å håndtere konsekvensene av alvorlige feil.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Sikrer sikkerhet</strong></summary>
+                        Oppdateringer og sikkerhetsforbedringer er en del av vedlikeholdet, som beskytter mot sårbarheter og trusler. Dette er kritisk for å beskytte sensitive data og forhindre sikkerhetsbrudd som kan skade virksomheten.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Forbedrer ytelse</strong></summary>
+                        Regelmessig vedlikehold bidrar til å optimalisere systemets ytelse. Dette kan innebære oppdatering av programvare, rensing av data og justering av systeminnstillinger for å sikre at alt fungerer effektivt og raskt.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Holder programvaren oppdatert</strong></summary>
+                        Teknologi utvikler seg raskt, og vedlikehold sikrer at programvaren din er oppdatert med de nyeste funksjonene og forbedringene. Dette gir deg tilgang til de nyeste verktøyene og forbedrer brukeropplevelsen.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Øker levetiden på systemer</strong></summary>
+                        Regelmessig vedlikehold kan forlenge levetiden til både programvare og maskinvare. Dette betyr at investeringene dine varer lenger, og du unngår hyppige oppgraderinger og kostnader ved å bytte ut utdaterte systemer.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Overholder forskrifter</strong></summary>
+                        Vedlikehold sørger for at systemer og prosesser overholder gjeldende lover og reguleringer, noe som er spesielt viktig for bransjer med strenge krav til datahåndtering og sikkerhet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Forbedrer brukeropplevelsen</strong></summary>
+                        Når systemer fungerer feilfritt, er brukeropplevelsen mye bedre. Dette gjelder både for interne ansatte og eksterne kunder. En stabil og responsiv plattform bidrar til økt produktivitet og kundetilfredshet.
+                      </details>
+                    </p>
                   </ul>
+
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                     Ved å investere i jevnlig vedlikehold, kan bedrifter sikre at deres teknologi fungerer optimalt, opprettholde sikkerhet, unngå unødvendige kostnader og forbedre både intern og ekstern opplevelse.

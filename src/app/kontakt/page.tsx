@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Kontakt side"
+        pageName="      "
         description="Send oss en melding, e-post eller ring oss. Vi er her for å hjelpe deg."
       />
 

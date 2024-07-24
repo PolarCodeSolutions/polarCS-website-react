@@ -100,32 +100,48 @@ const BlogDetailsPage = () => {
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                   Hvorfor er nettsider viktige for bedrifter?
                   </h3>
-
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Trykk på overskriftene for å lese mer.
+                  </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Økt synlighet og tilgjengelighet: </strong>
-                    En nettside gjør det mulig for kunder å finne informasjon om din bedrift 24/7, uavhengig av geografisk plassering. Dette gir din bedrift en global tilstedeværelse og gjør det enkelt for kunder å finne produkter og tjenester når det passer dem.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Trovverdighet og profesjonalisme: </strong>
-                    En profesjonelt utformet nettside gir et godt førsteinntrykk og bygger troverdighet. Kunder forventer at seriøse bedrifter har en nettside, og en godt designet side kan være avgjørende for å styrke tilliten til din virksomhet.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Markedsføringsplattform: </strong>
-                    Nettsider fungerer som en plattform for markedsføring og kommunikasjon. Her kan du dele oppdateringer, promotere produkter og tjenester, og engasjere kunder gjennom blogginnlegg, nyhetsbrev og sosiale medier. Dette bidrar til å øke merkevarebevisstheten og kundeengasjementet.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Kostnadseffektivitet: </strong>
-                    Sammenlignet med tradisjonelle markedsføringsmetoder er en nettside en kostnadseffektiv løsning for å nå ut til et stort publikum. Investeringen i en nettside gir ofte god avkastning ved å tiltrekke nye kunder og beholde eksisterende.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Analyse og innsikt: </strong>
-                    En nettside gir verdifull innsikt i kundeadferd gjennom verktøy som Google Analytics. Du kan spore trafikk, forstå kundepreferanser, og tilpasse markedsføringsstrategier basert på data, noe som kan bidra til økt salg og forbedret kundetilfredshet.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    Å ha en godt vedlikeholdt nettside gir deg et konkurransefortrinn. Mange forbrukere starter sin kjøpsprosess på nettet, og ved å være tilstede der kundene er, kan du tiltrekke flere potensielle kunder og stå sterkere i forhold til konkurrentene.
-                    </li>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Økt synlighet og tilgjengelighet</strong></summary>
+                        En nettside gjør det mulig for kunder å finne informasjon om din bedrift 24/7, uavhengig av geografisk plassering. Dette gir din bedrift en global tilstedeværelse og gjør det enkelt for kunder å finne produkter og tjenester når det passer dem.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Trovverdighet og profesjonalisme</strong></summary>
+                        En profesjonelt utformet nettside gir et godt førsteinntrykk og bygger troverdighet. Kunder forventer at seriøse bedrifter har en nettside, og en godt designet side kan være avgjørende for å styrke tilliten til din virksomhet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Markedsføringsplattform</strong></summary>
+                        Nettsider fungerer som en plattform for markedsføring og kommunikasjon. Her kan du dele oppdateringer, promotere produkter og tjenester, og engasjere kunder gjennom blogginnlegg, nyhetsbrev og sosiale medier. Dette bidrar til å øke merkevarebevisstheten og kundeengasjementet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Kostnadseffektivitet</strong></summary>
+                        Sammenlignet med tradisjonelle markedsføringsmetoder er en nettside en kostnadseffektiv løsning for å nå ut til et stort publikum. Investeringen i en nettside gir ofte god avkastning ved å tiltrekke nye kunder og beholde eksisterende.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Analyse og innsikt</strong></summary>
+                        En nettside gir verdifull innsikt i kundeadferd gjennom verktøy som Google Analytics. Du kan spore trafikk, forstå kundepreferanser, og tilpasse markedsføringsstrategier basert på data, noe som kan bidra til økt salg og forbedret kundetilfredshet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Konkurransefortrinn</strong></summary>
+                        Å ha en godt vedlikeholdt nettside gir deg et konkurransefortrinn. Mange forbrukere starter sin kjøpsprosess på nettet, og ved å være tilstede der kundene er, kan du tiltrekke flere potensielle kunder og stå sterkere i forhold til konkurrentene.
+                      </details>
+                    </p>
                   </ul>
+
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                     I sum, en nettside er en uvurderlig ressurs for å bygge og styrke din bedrifts tilstedeværelse i markedet. Ikke gå glipp av muligheten til å vise frem det beste av hva din bedrift har å tilby – invester i en nettside i dag!

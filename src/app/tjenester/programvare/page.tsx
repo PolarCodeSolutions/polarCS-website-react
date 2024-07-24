@@ -1,16 +1,19 @@
+
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-
+import React, { useState } from 'react';
 import { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "programvare",
   description: "Programvare informasjon",
-  // other metadata
 };
 
 const BlogDetailsPage = () => {
+
+  
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
@@ -72,6 +75,7 @@ const BlogDetailsPage = () => {
                     </a>
                   </div>
                 </div>
+                
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   Design og utvikling av programvare starter med en behovsanalyse hvor vi forstår dine mål, målgruppe og spesifikke krav. Basert på denne analysen utarbeider vi en detaljert plan og spesifikasjoner for programvaren. Deretter utformer vårt kreative team et designkonsept som reflekterer din merkevare og imøtekommer brukernes behov. Når designet er godkjent, går våre utviklere i gang med å kode programvaren ved hjelp av moderne teknologier, og sikrer at den fungerer optimalt på alle enheter. Etter utvikling gjennomfører vi grundig testing for å sikre feilfri funksjonalitet, brukervennlighet og sikkerhet. Når alle tester er fullført og godkjent, lanserer vi programvaren, håndterer den tekniske overføringen og tilbyr vedlikeholdstjenester for å holde programvaren oppdatert og sikker. Gjennom hele prosessen jobber vi tett med deg for å levere en programvareløsning som oppfyller dine behov og overgår dine forventninger.                  </p>
@@ -89,40 +93,58 @@ const BlogDetailsPage = () => {
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                   Hvorfor er programvare viktig for en bedrift?
                   </h3>
-
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Trykk på overskriftene for å lese mer.
+                  </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Effektivisering av arbeidsprosesser: </strong>
-                    Programvare kan automatisere rutineoppgaver, noe som sparer tid og reduserer menneskelige feil. Dette gjør arbeidsprosessene mer effektive og lar ansatte fokusere på mer verdifulle oppgaver.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Bedre datastyring og analyse: </strong>
-                    Moderne programvare gir deg verktøy for å samle inn, organisere og analysere data. Dette gir innsikt i virksomhetens ytelse og kundeadferd, noe som gjør det lettere å ta informerte beslutninger.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Forbedret kommunikasjon og samarbeid: </strong>
-                    Programvare som e-postsystemer, chatverktøy og prosjektstyringsverktøy forbedrer kommunikasjonen og samarbeidet internt i bedriften. Dette sikrer bedre koordinering og raskere problemløsning.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Økt produktivitet: </strong>
-                    Med spesialtilpasset programvare kan bedrifter oppnå høyere produktivitet ved å optimalisere arbeidsflyten og redusere tid brukt på manuelle oppgaver.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Skalerbarhet: </strong>
-                    Programvare gir bedrifter fleksibilitet til å skalere sine operasjoner. Enten det gjelder å håndtere økt arbeidsbelastning, utvide funksjonaliteten eller tilpasse seg nye forretningsmodeller, kan programvare tilpasses for å møte endrede behov.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Konkurransefortrinn: </strong>
-                    Teknologiske løsninger kan gi deg en fordel over konkurrentene. Enten det er gjennom innovativ kundeservice, raskere produktutvikling eller mer effektive interne prosesser, kan programvare spille en nøkkelrolle i å differensiere din bedrift i markedet
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Sikkerhet og overholdelse: </strong>
-                    Programvare kan bidra til å beskytte sensitive data og sikre overholdelse av lover og forskrifter. Dette er spesielt viktig i bransjer med strenge krav til personvern og datasikkerhet.
-                    </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                    <strong>Kundetilfredshet: </strong>
-                    Brukervennlige programvareløsninger kan forbedre kundeopplevelsen ved å tilby raskere, mer presise tjenester og bedre kundesupport, noe som kan føre til økt kundetilfredshet og lojalitet.
-                    </li>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Effektivisering av arbeidsprosesser</strong></summary>
+                        Programvare kan automatisere rutineoppgaver, noe som sparer tid og reduserer menneskelige feil. Dette gjør arbeidsprosessene mer effektive og lar ansatte fokusere på mer verdifulle oppgaver.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Bedre datastyring og analyse</strong></summary>
+                        Moderne programvare gir deg verktøy for å samle inn, organisere og analysere data. Dette gir innsikt i virksomhetens ytelse og kundeadferd, noe som gjør det lettere å ta informerte beslutninger.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Forbedret kommunikasjon og samarbeid</strong></summary>
+                        Programvare som e-postsystemer, chatverktøy og prosjektstyringsverktøy forbedrer kommunikasjonen og samarbeidet internt i bedriften. Dette sikrer bedre koordinering og raskere problemløsning.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Økt produktivitet</strong></summary>
+                        Med spesialtilpasset programvare kan bedrifter oppnå høyere produktivitet ved å optimalisere arbeidsflyten og redusere tid brukt på manuelle oppgaver.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Skalerbarhet</strong></summary>
+                        Programvare gir bedrifter fleksibilitet til å skalere sine operasjoner. Enten det gjelder å håndtere økt arbeidsbelastning, utvide funksjonaliteten eller tilpasse seg nye forretningsmodeller, kan programvare tilpasses for å møte endrede behov.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Konkurransefortrinn</strong></summary>
+                        Teknologiske løsninger kan gi deg en fordel over konkurrentene. Enten det er gjennom innovativ kundeservice, raskere produktutvikling eller mer effektive interne prosesser, kan programvare spille en nøkkelrolle i å differensiere din bedrift i markedet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Sikkerhet og overholdelse</strong></summary>
+                        Programvare kan bidra til å beskytte sensitive data og sikre overholdelse av lover og forskrifter. Dette er spesielt viktig i bransjer med strenge krav til personvern og datasikkerhet.
+                      </details>
+                    </p>
+                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <details>
+                        <summary><strong>Kundetilfredshet</strong></summary>
+                        Brukervennlige programvareløsninger kan forbedre kundeopplevelsen ved å tilby raskere, mer presise tjenester og bedre kundesupport, noe som kan føre til økt kundetilfredshet og lojalitet.
+                      </details>
+                    </p>
                   </ul>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
