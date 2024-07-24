@@ -14,7 +14,7 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Våre tjenester"
+        pageName="          "
         description="På denne siden finner du våre tjenester. Vi tilbyr en rekke tjenester som kan hjelpe deg med å utvikle og forbedre din bedrift. Våre tjenester inkluderer webdesign, apputvikling, digital markedsføring og mye mer."
       />
 
