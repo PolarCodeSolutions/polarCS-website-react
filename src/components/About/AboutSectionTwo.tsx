@@ -26,7 +26,7 @@ const AboutSectionTwo = () => {
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
-              <div className="mb-9">
+              <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Open Source-utvikling
                 </h3>
@@ -34,7 +34,7 @@ const AboutSectionTwo = () => {
                 Vi tror på kraften i åpen kildekode og ønsker å bidra til fellesskapet ved å dele vår kunnskap og våre løsninger.
                 </p>
               </div>
-              <div className="mb-9">
+              <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 Kvalitet og Innovasjon
                 </h3>
