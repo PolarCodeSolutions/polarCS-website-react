@@ -7,10 +7,11 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Head from 'next/head';
 
+import { Metadata } from "next";
 
-const metadata = {
-  title: "Profesjonell Webdesign og Programvareutvikling | PolarCode Solutions",
-  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett.",
+export const metadata: Metadata = {
+  title: "Webdesign & Programvareutvikling | PolarCode Solutions",
+  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
 };
 
 

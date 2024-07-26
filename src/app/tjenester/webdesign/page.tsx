@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "webdesign",
-  description: "Webdesign informasjon",
+  title: "Webdesign & utviklingsinformasjon | PolarCode Solutions",
+  description: "Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut.",
   // other metadata
 };
 

@@ -335,7 +335,9 @@ const Footer = () => {
               </linearGradient>
             </defs>
           </svg>
+          
         </div>
+        
       </footer>
     </>
   );

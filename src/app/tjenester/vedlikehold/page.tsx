@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "vedlikehold",
-  description: "Vedlikeholdstjenester infoformasjon",
+  title: "Vedlikehold og support-tjenester | PolarCode Solutions",
+  description: "Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt.",
   // other metadata
 };
 

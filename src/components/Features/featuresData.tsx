@@ -15,6 +15,7 @@ const featuresData: Feature[] = [
     title: "Webdesign",
     paragraph:
       "Vi leverer skreddersydde nettsider som er tilpasset dine behov og ønsker.",
+      dropdownInfo: "Webdesign handler om å lage og vedlikeholde nettsider. Det involverer flere aspekter som layout (hvordan siden er strukturert), innhold (tekst, bilder og videoer), grafisk design (bruk av farger, skrifttyper og bilder), og brukeropplevelse (hvordan brukeren navigerer og interagerer med siden). Målet er å skape en visuelt tiltalende og funksjonell nettside som er enkel å bruke, slik at besøkende finner det de leter etter og får en god opplevelse."
   },
   {
     id: 1,
@@ -30,6 +31,7 @@ const featuresData: Feature[] = [
     title: "Webside med template",
     paragraph:
       "Med en template kan vi raskt sette opp en nettside til deg som er tilpasset dine behov.",
+      dropdownInfo: "En webside med en template er en nettside som er bygget ved hjelp av en ferdiglaget mal. Templaten gir et forhåndsdesignet oppsett med plass til tekst, bilder og andre elementer. Dette gjør det raskere og enklere å lage en nettside fordi du ikke trenger å starte fra bunnen av. Du kan tilpasse templaten med ditt eget innhold og design, men grunnstrukturen er allerede på plass. Dette er en kostnadseffektiv måte å få en profesjonell nettside på."
   },
   {
     id: 1,
@@ -45,6 +47,7 @@ const featuresData: Feature[] = [
     title: "Ui/Ux Design",
     paragraph:
       "Vi designer brukergrensesnitt og brukeropplevelse som er enkel og intuitiv for brukeren.",
+      dropdownInfo: "UI/UX design handler om hvordan en nettside eller applikasjon ser ut og føles for brukerne. UI (User Interface) refererer til det visuelle designet, som farger, knapper og menyer, mens UX (User Experience) fokuserer på brukerens opplevelse og interaksjon med siden. Målet er å gjøre nettsiden både estetisk tiltalende og enkel å bruke, slik at brukerne får en god opplevelse og finner det de trenger uten problemer."
   },
   {
     id: 1,
@@ -60,6 +63,7 @@ const featuresData: Feature[] = [
     title: "Systemutvikling",
     paragraph:
       "Vi designer og utvikler systemer som er tilpasset dine behov og ønsker.",
+      dropdownInfo: "Systemutvikling handler om å lage og vedlikeholde programvare som løser spesifikke oppgaver for en bedrift eller organisasjon. Dette kan være alt fra enkle nettsider til komplekse datasystemer som håndterer store mengder data. Systemutvikling involverer planlegging, design, programmering, testing og vedlikehold for å sikre at systemet fungerer effektivt og møter brukerens behov. Målet er å skape løsninger som gjør arbeidsprosesser enklere, raskere og mer pålitelige."
   },
   {
     id: 1,
@@ -75,6 +79,7 @@ const featuresData: Feature[] = [
     title: "Applikasjoner",
     paragraph:
       "Med moderne teknologi utvikler vi applikasjoner som er tilpasset dine behov og ønsker.",
+      dropdownInfo: "Applikasjoner er programvare som er laget for å utføre spesifikke oppgaver på en datamaskin eller mobil enhet. Eksempler på applikasjoner inkluderer alt fra enkle vær-apper til komplekse systemer som banktjenester og regnskapsprogrammer. Applikasjoner kan hjelpe brukere med å utføre arbeid, holde kontakt med andre, ha det gøy, og mye mer. Målet med en applikasjon er å gjøre en bestemt oppgave enklere og mer effektiv for brukeren."
   },
   {
     id: 1,
@@ -90,6 +95,7 @@ const featuresData: Feature[] = [
     title: "Embedded Systems",
     paragraph:
       "Vi designer og utvikler lav-nivåsystemer som kan brukes i alt fra industri til forbrukerelektronikk.",
+      dropdownInfo: "Embedded systems er spesialiserte datasystemer som er innebygd i andre produkter for å utføre bestemte oppgaver. De finnes i mange ting vi bruker daglig, som biler, vaskemaskiner, mobiltelefoner og mikrobølgeovner. Disse systemene består av både maskinvare og programvare, og de er designet for å være effektive og pålitelige. Embedded systems gjør at produktene de er en del av kan fungere automatisk og mer effektivt, uten at vi trenger å tenke på hvordan de virker."
   },
 ];
 export default featuresData;

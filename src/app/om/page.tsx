@@ -4,11 +4,12 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Om oss",
-  description: "Denne siden inneholder informasjon om selskapet",
+export const metadata = {
+  title: "Om Oss | PolarCode Solutions",
+  description: "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
   // other metadata
 };
+
 
 const AboutPage = () => {
   return (
