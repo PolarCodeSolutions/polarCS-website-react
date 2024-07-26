@@ -1,5 +1,3 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
@@ -7,16 +5,14 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
-import { Metadata } from "next";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Head from 'next/head';
 
-export const metadata: Metadata = {
-  title: "PolarCode Solutions",
-  description: "Hjemmeside for PolarCode Solutions",
 
+const metadata = {
+  title: "Profesjonell Webdesign og Programvareutvikling | PolarCode Solutions",
+  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett.",
 };
+
 
 export default function Home() {
   return (
@@ -34,3 +30,4 @@ export default function Home() {
 
 //<Testimonials />
 //<Blog />
+
