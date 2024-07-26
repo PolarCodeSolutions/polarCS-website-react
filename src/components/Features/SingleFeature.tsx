@@ -14,12 +14,11 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
           {paragraph}
         </p>
-        <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-          <details>
+        <details className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
             <summary>Vis mer</summary>
             {dropdownInfo}
           </details>
-        </p>
+        
       </div>
     </div>
   );
