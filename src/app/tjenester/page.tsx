@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tjenester",
-  description: "Tjeneser informasjon",
+  title: "Tjenester | PolarCode Solutions",
+  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett.",
   // other metadata
 };
 
