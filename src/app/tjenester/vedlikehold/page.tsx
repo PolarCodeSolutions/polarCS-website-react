@@ -1,6 +1,7 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
+import Head from 'next/head';
 
 import { Metadata } from "next";
 
@@ -10,9 +11,18 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogDetailsPage = () => {
+const BlogDetailsPage: React.FC = () => {
   return (
     <>
+     <Head>
+      <title>Vedlikehold og support-tjenester | PolarCode Solutions</title>
+      <meta name="description" content="Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt." />
+      <meta name="keywords" content="vedlikehold, support-tjenester, PolarCode Solutions, nettsider, programvare, optimal ytelse" />
+      <meta property="og:title" content="Vedlikehold og support-tjenester | PolarCode Solutions" />
+      <meta property="og:description" content="Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt." />
+      <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
+      <meta property="og:url" content="https://polarcode.solutions/vedlikehold" />
+    </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
