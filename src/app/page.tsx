@@ -7,17 +7,18 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Head from 'next/head';
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Webdesign & Programvareutvikling | PolarCode Solutions",
-  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
-};
-
-
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>Webdesign & Programvareutvikling | PolarCode Solutions</title>
+        <meta name="description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
+        <meta name="keywords" content="webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland" />
+        <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
+        <meta property="og:description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
+        <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
+        <meta property="og:url" content="https://polarcode.solutions" />
+      </Head>
       <ScrollUp />
       <Hero />
       <Blog />
@@ -27,8 +28,6 @@ export default function Home() {
       <Contact />
     </>
   );
-}
+};
 
-//<Testimonials />
-//<Blog />
-
+export default Home;

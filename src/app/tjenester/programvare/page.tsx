@@ -4,17 +4,28 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Metadata } from "next";
+import Head from 'next/head';
+
 
 export const metadata: Metadata = {
   title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
   description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
 };
 
-const BlogDetailsPage = () => {
+const BlogDetailsPage: React.FC = () => {
 
   
   return (
     <>
+    <Head>
+    <title>Programvare & utviklingsinformasjon | PolarCode Solutions</title>
+    <meta name="description" content="Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov." />
+    <meta name="keywords" content="programvare, utviklingsinformasjon, skreddersydde løsninger, PolarCode Solutions" />
+    <meta property="og:title" content="Programvare & utviklingsinformasjon | PolarCode Solutions" />
+    <meta property="og:description" content="Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov." />
+    <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
+    <meta property="og:url" content="https://polarcode.solutions/programvare" />
+    </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
