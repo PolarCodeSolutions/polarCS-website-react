@@ -16,11 +16,15 @@ const NewsLatterBox = () => {
       <div>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Telefon: +47 950 44 586
-    
       </p>
+
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
       E-post: contact@polarcode.solutions 
-        </p>        
+        </p>
+
+        <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      Adresse: Mo i Rana, Nordland, Norge
+        </p>            
 
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           Vi svarer på alle henvendelser vi får.

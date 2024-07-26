@@ -4,10 +4,11 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kontakt oss",
-  description: "Kontakt oss, informasjon",
+  title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
+  description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
   // other metadata
 };
+
 
 const ContactPage = () => {
   return (

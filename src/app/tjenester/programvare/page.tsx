@@ -5,10 +5,9 @@ import Image from "next/image";
 import React, { useState } from 'react';
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: "programvare",
-  description: "Programvare informasjon",
+  title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
+  description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
 };
 
 const BlogDetailsPage = () => {
