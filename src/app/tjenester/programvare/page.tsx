@@ -2,38 +2,46 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-import React, { useState } from 'react';
-import { Metadata } from "next";
-import Head from 'next/head';
+import React from 'react';
 
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://polarcode.solutions"),
   title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
   description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
+  keywords: "programvare, utviklingsinformasjon, skreddersydde løsninger, PolarCode Solutions",
+  openGraph: {
+    type: "website",
+    title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
+    description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
+    url: "https://polarcode.solutions/programvare",
+    images: [
+      {
+        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions/programvare"
+  }
 };
 
-const BlogDetailsPage: React.FC = () => {
 
-  
+const BlogDetailsPage: React.FC = () => {
   return (
     <>
-    <Head>
-    <title>Programvare & utviklingsinformasjon | PolarCode Solutions</title>
-    <meta name="description" content="Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov." />
-    <meta name="keywords" content="programvare, utviklingsinformasjon, skreddersydde løsninger, PolarCode Solutions" />
-    <meta property="og:title" content="Programvare & utviklingsinformasjon | PolarCode Solutions" />
-    <meta property="og:description" content="Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov." />
-    <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
-    <meta property="og:url" content="https://polarcode.solutions/programvare" />
-    </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   Utvikling av programvare
-                </h2>
+                </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
@@ -42,7 +50,9 @@ const BlogDetailsPage: React.FC = () => {
                           <Image
                             src="/images/blog/asgeir.jpg"
                             alt="author"
-                            fill
+                            width={70}
+                            height={70}
+                            style={{ objectFit: 'cover' }}
                           />
                         </div>
                       </div>
@@ -91,12 +101,14 @@ const BlogDetailsPage: React.FC = () => {
                   Design og utvikling av programvare starter med en behovsanalyse hvor vi forstår dine mål, målgruppe og spesifikke krav. Basert på denne analysen utarbeider vi en detaljert plan og spesifikasjoner for programvaren. Deretter utformer vårt kreative team et designkonsept som reflekterer din merkevare og imøtekommer brukernes behov. Når designet er godkjent, går våre utviklere i gang med å kode programvaren ved hjelp av moderne teknologier, og sikrer at den fungerer optimalt på alle enheter. Etter utvikling gjennomfører vi grundig testing for å sikre feilfri funksjonalitet, brukervennlighet og sikkerhet. Når alle tester er fullført og godkjent, lanserer vi programvaren, håndterer den tekniske overføringen og tilbyr vedlikeholdstjenester for å holde programvaren oppdatert og sikker. Gjennom hele prosessen jobber vi tett med deg for å levere en programvareløsning som oppfyller dine behov og overgår dine forventninger.                  </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
-                        src="/images/tjenester-details/programvare.webp"
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
+                    <Image
+                      src="/images/tjenester-details/programvare.webp"
+                      alt="image"
+                      width={1200}
+                      height={900}
+                      style={{ objectFit: 'cover' }}
+                    />
+
                     </div>
                   </div>
                   
@@ -107,55 +119,56 @@ const BlogDetailsPage: React.FC = () => {
                     Trykk på overskriftene for å lese mer.
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Effektivisering av arbeidsprosesser</strong></summary>
                         Programvare kan automatisere rutineoppgaver, noe som sparer tid og reduserer menneskelige feil. Dette gjør arbeidsprosessene mer effektive og lar ansatte fokusere på mer verdifulle oppgaver.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Bedre datastyring og analyse</strong></summary>
                         Moderne programvare gir deg verktøy for å samle inn, organisere og analysere data. Dette gir innsikt i virksomhetens ytelse og kundeadferd, noe som gjør det lettere å ta informerte beslutninger.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Forbedret kommunikasjon og samarbeid</strong></summary>
                         Programvare som e-postsystemer, chatverktøy og prosjektstyringsverktøy forbedrer kommunikasjonen og samarbeidet internt i bedriften. Dette sikrer bedre koordinering og raskere problemløsning.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Økt produktivitet</strong></summary>
                         Med spesialtilpasset programvare kan bedrifter oppnå høyere produktivitet ved å optimalisere arbeidsflyten og redusere tid brukt på manuelle oppgaver.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Skalerbarhet</strong></summary>
                         Programvare gir bedrifter fleksibilitet til å skalere sine operasjoner. Enten det gjelder å håndtere økt arbeidsbelastning, utvide funksjonaliteten eller tilpasse seg nye forretningsmodeller, kan programvare tilpasses for å møte endrede behov.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Konkurransefortrinn</strong></summary>
                         Teknologiske løsninger kan gi deg en fordel over konkurrentene. Enten det er gjennom innovativ kundeservice, raskere produktutvikling eller mer effektive interne prosesser, kan programvare spille en nøkkelrolle i å differensiere din bedrift i markedet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Sikkerhet og overholdelse</strong></summary>
                         Programvare kan bidra til å beskytte sensitive data og sikre overholdelse av lover og forskrifter. Dette er spesielt viktig i bransjer med strenge krav til personvern og datasikkerhet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Kundetilfredshet</strong></summary>
                         Brukervennlige programvareløsninger kan forbedre kundeopplevelsen ved å tilby raskere, mer presise tjenester og bedre kundesupport, noe som kan føre til økt kundetilfredshet og lojalitet.
                       </details>
-                    </p>
+                    </li>
                   </ul>
+
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                     Ved å investere i riktig programvare kan bedrifter oppnå betydelige fordeler, fra forbedret effektivitet og produktivitet til økt sikkerhet og konkurranseevne.

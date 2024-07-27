@@ -5,19 +5,63 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import { Metadata } from "next";
 import Head from 'next/head';
 
-const Home: React.FC = () => {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://polarcode.solutions"),
+  title: "Webdesign & Programvareutvikling | PolarCode Solutions",
+  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+  keywords: "webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
+  openGraph: {
+    type: "website",
+    title: "Webdesign & Programvareutvikling | PolarCode Solutions",
+    description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+    url: "https://polarcode.solutions",
+    images: [
+      {
+        url: "/images/logo/croppedPolarLogo.png",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions"
+  }
+};
+
+export default function Home() {
   return (
     <>
       <Head>
-        <title>Webdesign & Programvareutvikling | PolarCode Solutions</title>
-        <meta name="description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
-        <meta name="keywords" content="webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland" />
-        <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
-        <meta property="og:description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
-        <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
-        <meta property="og:url" content="https://polarcode.solutions" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PolarCode Solutions",
+              "url": "https://polarcode.solutions",
+              "logo": "https://polarcode.solutions/logo.png",
+              "description": "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+47 95 04 45 86",
+                "contactType": "Customer Service"
+              },
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61560407736033",
+                "https://discord.gg/hUAksuANZ4"
+              ]
+            })
+          }}
+        />
       </Head>
       <ScrollUp />
       <Hero />
@@ -28,6 +72,4 @@ const Home: React.FC = () => {
       <Contact />
     </>
   );
-};
-
-export default Home;
+}

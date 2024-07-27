@@ -6,41 +6,54 @@ import Head from 'next/head';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://polarcode.solutions"),
   title: "Vedlikehold og support-tjenester | PolarCode Solutions",
   description: "Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt.",
-  // other metadata
+  keywords: "vedlikehold, support-tjenester, PolarCode Solutions, nettsider, programvare, optimal ytelse",
+  openGraph: {
+    type: "website",
+    title: "Vedlikehold og support-tjenester | PolarCode Solutions",
+    description: "Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt.",
+    url: "https://polarcode.solutions/vedlikehold",
+    images: [
+      {
+        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions/vedlikehold"
+  }
 };
+
 
 const BlogDetailsPage: React.FC = () => {
   return (
     <>
-     <Head>
-      <title>Vedlikehold og support-tjenester | PolarCode Solutions</title>
-      <meta name="description" content="Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt." />
-      <meta name="keywords" content="vedlikehold, support-tjenester, PolarCode Solutions, nettsider, programvare, optimal ytelse" />
-      <meta property="og:title" content="Vedlikehold og support-tjenester | PolarCode Solutions" />
-      <meta property="og:description" content="Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt." />
-      <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
-      <meta property="og:url" content="https://polarcode.solutions/vedlikehold" />
-    </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   Vedlikeholdstjenester
-                </h2>
+                </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
-                            src="/images/logo/croppedPolarLogo.png"
-                            alt="author"
-                            fill
-                          />
+                        <Image
+                          src="/images/logo/croppedPolarLogo.png"
+                          alt="author"
+                          width={70}
+                          height={70}
+                          style={{ objectFit: 'cover' }}
+                        />
+
                         </div>
                       </div>
                       <div className="w-full">
@@ -90,9 +103,11 @@ const BlogDetailsPage: React.FC = () => {
                       <Image
                         src="/images/tjenester-details/vedlikehold.webp"
                         alt="image"
-                        fill
-                        className="object-cover object-center"
+                        width={1200}
+                        height={900}
+                        style={{ objectFit: 'cover' }}
                       />
+
                     </div>
                   </div>
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
@@ -102,55 +117,56 @@ const BlogDetailsPage: React.FC = () => {
                     Trykk på overskriftene for å lese mer.
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Opprettholder driftssikkerhet</strong></summary>
                         Regelmessig vedlikehold sikrer at systemer og programvare fungerer som forventet og reduserer risikoen for nedetid. Dette er avgjørende for å opprettholde en stabil drift og unngå forstyrrelser i virksomheten.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Forhindrer kostbare feil</strong></summary>
                         Ved å oppdage og rette feil tidlig, kan vedlikehold forhindre større problemer som kan føre til dyre reparasjoner eller systemgjenoppretting. Forebygging er ofte langt billigere enn å håndtere konsekvensene av alvorlige feil.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Sikrer sikkerhet</strong></summary>
                         Oppdateringer og sikkerhetsforbedringer er en del av vedlikeholdet, som beskytter mot sårbarheter og trusler. Dette er kritisk for å beskytte sensitive data og forhindre sikkerhetsbrudd som kan skade virksomheten.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Forbedrer ytelse</strong></summary>
                         Regelmessig vedlikehold bidrar til å optimalisere systemets ytelse. Dette kan innebære oppdatering av programvare, rensing av data og justering av systeminnstillinger for å sikre at alt fungerer effektivt og raskt.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Holder programvaren oppdatert</strong></summary>
                         Teknologi utvikler seg raskt, og vedlikehold sikrer at programvaren din er oppdatert med de nyeste funksjonene og forbedringene. Dette gir deg tilgang til de nyeste verktøyene og forbedrer brukeropplevelsen.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Øker levetiden på systemer</strong></summary>
                         Regelmessig vedlikehold kan forlenge levetiden til både programvare og maskinvare. Dette betyr at investeringene dine varer lenger, og du unngår hyppige oppgraderinger og kostnader ved å bytte ut utdaterte systemer.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Overholder forskrifter</strong></summary>
                         Vedlikehold sørger for at systemer og prosesser overholder gjeldende lover og reguleringer, noe som er spesielt viktig for bransjer med strenge krav til datahåndtering og sikkerhet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Forbedrer brukeropplevelsen</strong></summary>
                         Når systemer fungerer feilfritt, er brukeropplevelsen mye bedre. Dette gjelder både for interne ansatte og eksterne kunder. En stabil og responsiv plattform bidrar til økt produktivitet og kundetilfredshet.
                       </details>
-                    </p>
+                    </li>
                   </ul>
+
 
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">

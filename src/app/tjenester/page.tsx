@@ -1,26 +1,42 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Head from 'next/head';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://polarcode.solutions"),
+  title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
+  description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
+  keywords: "polar tjenester, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
+  openGraph: {
+    type: "website",
+    title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
+    description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
+    url: "https://polarcode.solutions/tjenester",
+    images: [
+      {
+        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions/tjenester"
+  }
+};
 
 const Blog: React.FC = () => {
   return (
     <>
-      <Head>
-        <title>Tjenester vi tilbyr våre kunder | PolarCode Solutions</title>
-        <meta name="description" content="Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions." />
-        <meta name="keywords" content="tjenester, webdesign, programvareutvikling, vedlikehold, PolarCode Solutions, digital markedsføring, apputvikling" />
-        <meta property="og:title" content="Tjenester vi tilbyr våre kunder | PolarCode Solutions" />
-        <meta property="og:description" content="Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions." />
-        <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
-        <meta property="og:url" content="https://polarcode.solutions/tjenester" />
-      </Head>
       <Breadcrumb
-        pageName=""
+        pageName="Tjenester vi tilbyr våre kunder"
         description="På denne siden finner du våre tjenester. Vi tilbyr en rekke tjenester som kan hjelpe deg med å utvikle og forbedre din bedrift. Våre tjenester inkluderer webdesign, apputvikling, digital markedsføring og mye mer."
       />
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
+
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
               <div

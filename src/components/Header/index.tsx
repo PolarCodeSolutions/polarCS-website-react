@@ -69,11 +69,12 @@ const Header = () => {
                 <Image
                   src="/images/logo/croppedPolarLogo.png"
                   alt="logo"
-                  width={100}
-                  height={25}
+                  width={60}
+                  height={15}
                 />
               </Link>
             </div>
+            
             <div className="flex w-full items-center justify-between px-4">
               <div>
                 <button

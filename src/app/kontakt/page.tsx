@@ -1,32 +1,38 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
-import Head from 'next/head';
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://polarcode.solutions"),
   title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
   description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
-  // other metadata
+  keywords: "kontakt, webdesign, programvareutvikling, PolarCode Solutions, tilbud, informasjon",
+  openGraph: {
+    type: "website",
+    title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
+    description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
+    url: "https://polarcode.solutions/kontakt",
+    images: [
+      {
+        url: "URL til bilde",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions/kontakt"
+  }
 };
 
 const ContactPage: React.FC = () => {
   return (
     <>
-    <Head>
-    <title>Kontakt Oss for tilbud og info | PolarCode Solutions</title>
-    <meta name="description" content="Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg." />
-    <meta name="keywords" content="kontakt, webdesign, programvareutvikling, PolarCode Solutions, tilbud, informasjon" />
-    <meta property="og:title" content="Kontakt Oss for tilbud og info | PolarCode Solutions" />
-    <meta property="og:description" content="Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg." />
-    <meta property="og:image" content="URL til bilde" />
-    <meta property="og:url" content="https://polarcode.solutions/kontakt" />
-  </Head>
       <Breadcrumb
-        pageName="      "
+        pageName="Kontakt oss for tilbud og informasjon"
         description="Send oss en melding, e-post eller ring oss. Vi er her for å hjelpe deg."
       />
-
       <Contact />
     </>
   );
