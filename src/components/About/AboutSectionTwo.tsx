@@ -13,15 +13,20 @@ const AboutSectionTwo = () => {
               <Image
                 src="/images/about/opensource.webp"
                 alt="about image"
-                fill
+                width={800}
+                height={600}
+                style={{ objectFit: 'cover' }}
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/about/opensource.webp"
                 alt="about image"
-                fill
+                width={800}
+                height={600}
+                style={{ objectFit: 'cover' }}
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
+
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">

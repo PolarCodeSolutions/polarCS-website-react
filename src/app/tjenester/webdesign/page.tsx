@@ -8,40 +8,51 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Webdesign & utviklingsinformasjon | PolarCode Solutions",
   description: "Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut.",
-  // other metadata
+  keywords: "webdesign, utviklingsinformasjon, skreddersydd webdesign, PolarCode Solutions, brukervennlige nettsteder",
+  openGraph: {
+    type: "website",
+    title: "Webdesign & utviklingsinformasjon | PolarCode Solutions",
+    description: "Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut.",
+    url: "https://polarcode.solutions/webdesign",
+    images: [
+      {
+        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        width: 800,
+        height: 600,
+        alt: "PolarCode Solutions logo"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://polarcode.solutions/webdesign"
+  }
 };
 
 const BlogDetailsPage: React.FC = () => {
   return (
     <>
-      <Head>
-        <title>Webdesign & utviklingsinformasjon | PolarCode Solutions</title>
-        <meta name="description" content="Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut." />
-        <meta name="keywords" content="webdesign, utviklingsinformasjon, skreddersydd webdesign, PolarCode Solutions, brukervennlige nettsteder" />
-        <meta property="og:title" content="Webdesign & utviklingsinformasjon | PolarCode Solutions" />
-        <meta property="og:description" content="Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut." />
-        <meta property="og:image" content="/images/logo/croppedPolarLogo.png" />
-        <meta property="og:url" content="https://polarcode.solutions/webdesign" />
-      </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   Design og utvikling av nettsider 
-                </h2>
+                </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
-                        <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
-                            src="/images/blog/morten.png"
-                            alt="author"
-                            fill
-                          />
-                        </div>
+                      <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                        <Image
+                          src="/images/blog/morten.png"
+                          alt="author"
+                          width={40}
+                          height={40}
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
@@ -94,12 +105,13 @@ const BlogDetailsPage: React.FC = () => {
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
-                        src="/images/tjenester-details/design.webp"
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
+                    <Image
+                      src="/images/tjenester-details/design.webp"
+                      alt="image"
+                      width={1200}
+                      height={900}
+                      style={{ objectFit: 'cover' }}
+                    />
                     </div>
                   </div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
@@ -114,42 +126,42 @@ const BlogDetailsPage: React.FC = () => {
                     Trykk på overskriftene for å lese mer.
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Økt synlighet og tilgjengelighet</strong></summary>
                         En nettside gjør det mulig for kunder å finne informasjon om din bedrift 24/7, uavhengig av geografisk plassering. Dette gir din bedrift en global tilstedeværelse og gjør det enkelt for kunder å finne produkter og tjenester når det passer dem.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Trovverdighet og profesjonalisme</strong></summary>
                         En profesjonelt utformet nettside gir et godt førsteinntrykk og bygger troverdighet. Kunder forventer at seriøse bedrifter har en nettside, og en godt designet side kan være avgjørende for å styrke tilliten til din virksomhet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Markedsføringsplattform</strong></summary>
                         Nettsider fungerer som en plattform for markedsføring og kommunikasjon. Her kan du dele oppdateringer, promotere produkter og tjenester, og engasjere kunder gjennom blogginnlegg, nyhetsbrev og sosiale medier. Dette bidrar til å øke merkevarebevisstheten og kundeengasjementet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Kostnadseffektivitet</strong></summary>
                         Sammenlignet med tradisjonelle markedsføringsmetoder er en nettside en kostnadseffektiv løsning for å nå ut til et stort publikum. Investeringen i en nettside gir ofte god avkastning ved å tiltrekke nye kunder og beholde eksisterende.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Analyse og innsikt</strong></summary>
                         En nettside gir verdifull innsikt i kundeadferd gjennom verktøy som Google Analytics. Du kan spore trafikk, forstå kundepreferanser, og tilpasse markedsføringsstrategier basert på data, noe som kan bidra til økt salg og forbedret kundetilfredshet.
                       </details>
-                    </p>
-                    <p className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg list-none">
                       <details>
                         <summary><strong>Konkurransefortrinn</strong></summary>
                         Å ha en godt vedlikeholdt nettside gir deg et konkurransefortrinn. Mange forbrukere starter sin kjøpsprosess på nettet, og ved å være tilstede der kundene er, kan du tiltrekke flere potensielle kunder og stå sterkere i forhold til konkurrentene.
                       </details>
-                    </p>
+                    </li>
                   </ul>
 
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">

@@ -43,17 +43,20 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
       <Image 
         src={imageLight} 
         alt={name} 
-        layout="fill" 
-        objectFit="contain" 
+        width={70}
+        height={70}
+        style={{ objectFit: 'contain' }}
         className="hidden dark:block" 
       />
       <Image 
         src={image} 
         alt={name} 
-        layout="fill" 
-        objectFit="contain" 
+        width={70}
+        height={70}
+        style={{ objectFit: 'contain' }}
         className="block dark:hidden" 
       />
+
     </a>
   </div>
 

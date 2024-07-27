@@ -50,7 +50,7 @@ const Footer = () => {
                   className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                 >
                   <img
-                    src="images/icons/metaIcon.png"
+                    src="/images/icons/metaIcon.png"
                     alt="Ikon"
                     width="40"
                     height="18"
@@ -65,7 +65,7 @@ const Footer = () => {
                   className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                 >
                   <img
-                    src="images/icons/discordIcon.png"
+                    src="/images/icons/discordIcon.png"
                     alt="Ikon"
                     width="50"
                     height="18"
