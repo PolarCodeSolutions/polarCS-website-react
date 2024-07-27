@@ -10,7 +10,7 @@ const blogData: Blog[] = [
     author: {
       name: "Morten Sandstedt",
       image: "/images/blog/morten.png",
-      designation: "Frontend designer & utvikler",
+      designation: "Webdesign og utvikler",
     },
     tags: ["webdesign"],
     publishDate: "2024",
@@ -40,7 +40,7 @@ const blogData: Blog[] = [
     author: {
       name: "Polar Code Solutions",
       image: "/images/logo/croppedPolarLogo.png",
-      designation: "Bedrift",
+      designation: "Webdesign, programvare, vedlikehold, support",
     },
     tags: ["Support"],
     publishDate: "2024",

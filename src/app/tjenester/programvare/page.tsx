@@ -7,7 +7,7 @@ import React from 'react';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
   description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
   keywords: "programvare, utviklingsinformasjon, skreddersydde løsninger, PolarCode Solutions",
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
     description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
-    url: "https://polarcode.solutions/programvare",
+    url: "https://www.polarcode.solutions/programvare",
     images: [
       {
-        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/programvare"
+    canonical: "https://www.polarcode.solutions/programvare"
   }
 };
 

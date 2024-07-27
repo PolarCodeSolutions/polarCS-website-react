@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Webdesign & utviklingsinformasjon | PolarCode Solutions",
   description: "Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut.",
   keywords: "webdesign, utviklingsinformasjon, skreddersydd webdesign, PolarCode Solutions, brukervennlige nettsteder",
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Webdesign & utviklingsinformasjon | PolarCode Solutions",
     description: "Oppdag våre skreddersydde webdesigntjenester hos PolarCode Solutions. Vi skaper unike, brukervennlige nettsteder som hjelper din bedrift å skille seg ut.",
-    url: "https://polarcode.solutions/webdesign",
+    url: "https://www.polarcode.solutions/webdesign",
     images: [
       {
-        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/webdesign"
+    canonical: "https://www.polarcode.solutions/webdesign"
   }
 };
 

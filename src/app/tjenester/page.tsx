@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
   description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
   keywords: "polar tjenester, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
     description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
-    url: "https://polarcode.solutions/tjenester",
+    url: "https://www.polarcode.solutions/tjenester",
     images: [
       {
-        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/tjenester"
+    canonical: "https://www.polarcode.solutions/tjenester"
   }
 };
 
