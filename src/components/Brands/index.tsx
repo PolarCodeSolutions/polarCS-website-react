@@ -40,22 +40,32 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
       rel="nofollow noreferrer"
       className="relative w-full h-20 opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
     >
-      <Image 
-        src={imageLight} 
-        alt={name} 
-        width={70}
-        height={70}
-        style={{ objectFit: 'contain' }}
-        className="hidden dark:block" 
-      />
-      <Image 
-        src={image} 
-        alt={name} 
-        width={70}
-        height={70}
-        style={{ objectFit: 'contain' }}
-        className="block dark:hidden" 
-      />
+      <div className="hidden dark:block">
+        <Image
+          src={imageLight}
+          alt={name}
+          title={name}
+          width={70}
+          height={70}
+          style={{ objectFit: 'contain', width: '70px', height: '70px' }}
+          loading="eager"
+        />
+      </div>
+      <div className="block dark:hidden">
+        <Image
+          src={image}
+          alt={name}
+          title={name}
+          width={70}
+          height={70}
+          style={{ objectFit: 'contain', width: '70px', height: '70px' }}
+          loading="eager"
+        />
+      </div>
+
+
+
+
 
     </a>
   </div>

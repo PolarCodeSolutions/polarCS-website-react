@@ -39,14 +39,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                <Image 
-                  src={author.image} 
-                  alt="author" 
-                  width={40} 
-                  height={40} 
-                  style={{ objectFit: 'cover' }} 
-                />
-
+                  <Image 
+                    src={author.image} 
+                    alt="author" 
+                    width={40} 
+                    height={40} 
+                    style={{ objectFit: 'cover', width: '100%', height: '100%' }} 
+                  />
                 </div>
               </div>
               <div className="w-full">

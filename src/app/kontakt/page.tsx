@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
   description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
   keywords: "kontakt, webdesign, programvareutvikling, PolarCode Solutions, tilbud, informasjon",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
     description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
-    url: "https://polarcode.solutions/kontakt",
+    url: "https://www.polarcode.solutions/kontakt",
     images: [
       {
         url: "URL til bilde",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/kontakt"
+    canonical: "https://www.polarcode.solutions/kontakt"
   }
 };
 

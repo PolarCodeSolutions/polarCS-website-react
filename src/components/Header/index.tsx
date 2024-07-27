@@ -59,21 +59,26 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
+          <div className="w-60 max-w-full px-4 xl:mr-12">
+            <Link
+              href="/"
+              className={`header-logo block w-full ${
+                sticky ? "py-5 lg:py-2" : "py-8"
+              } `}
+            >
+              <div className="relative" style={{ width: '60px', height: '60px' }}>
                 <Image
                   src="/images/logo/croppedPolarLogo.png"
                   alt="logo"
                   width={60}
-                  height={15}
+                  height={60}
+                  style={{ objectFit: 'contain' }}
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
+          </div>
+
+
             
             <div className="flex w-full items-center justify-between px-4">
               <div>

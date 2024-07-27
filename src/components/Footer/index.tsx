@@ -11,7 +11,7 @@ import {
   LinkedinIcon
 } from 'react-share';
 
-const url = "https://polarcode.solutions";
+const url = "https://www.polarcode.solutions/";
 const title = "Profesjonell Webdesign og Programvareutvikling | PolarCode Solutions";
 
 const Footer = () => {
@@ -39,38 +39,10 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Besøk gjerne våre sosiale medier for å holde deg oppdatert på våre nyeste prosjekter og tjenester.
+                  Kode, direkte fra kilden av nordlyset.
                 </p>
                 <div className="flex items-center">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61560407736033"
-                  aria-label="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                >
-                  <img
-                    src="/images/icons/metaIcon.png"
-                    alt="Ikon"
-                    width="40"
-                    height="18"
-                  />
-                </a>
-
-                <a
-                  href="https://discord.gg/hUAksuANZ4"
-                  aria-label="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                >
-                  <img
-                    src="/images/icons/discordIcon.png"
-                    alt="Ikon"
-                    width="50"
-                    height="18"
-                  />
-                </a>  
+                 
                 </div>
               </div>
             </div>
@@ -83,7 +55,31 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/tjenester"
+                      href="https://www.polarcode.solutions/tjenester/webdesign"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Webdesign
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/tjenester/programvare"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Programvare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/tjenester/vedlikehold"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Vedlikehold
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/tjenester"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Tjenester
@@ -91,16 +87,40 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/om"
+                      href="https://www.polarcode.solutions/om"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Om oss
                     </Link>
                   </li>
+                  <li>
+                  
+              <div className="mb-12 lg:mb-16">
+                <p>
+                  <b>Del oss med andre</b>
+                </p>
+                <ul>
+                <div>
+                <FacebookShareButton url={url} title={title}>
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <TwitterShareButton url={url} title={title}>
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+                <LinkedinShareButton url={url} title={title}>
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+              </div>
                 </ul>
               </div>
+        
+                  </li>
+  
+                </ul>
+
+              </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Kontakt og support
@@ -117,27 +137,84 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Del oss med andre
+                  Kontakt informasjon
                 </h2>
                 <ul>
-                <div>
-                <FacebookShareButton url={url} title={title}>
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                <TwitterShareButton url={url} title={title}>
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-                <LinkedinShareButton url={url} title={title}>
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-              </div>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/kontakt"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      +47 950 44 586
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/kontakt"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      contact@polarcode.solutions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.polarcode.solutions/kontakt"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Mo i Rana, Nordland, Norge
+                    </Link>
+                  </li>
+                  <li>
+                  <div className="mb-12 lg:mb-16">
+                    <p>
+                      <b>Sosiale medier</b>
+                    </p>
+                    <ul>
+                      <div className="flex space-x-6">
+                        <a 
+                          href="https://www.facebook.com/profile.php?id=61560407736033"
+                          aria-label="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        >
+                          <img
+                            src="/images/icons/metaIcon.png"
+                            alt="Ikon"
+                            width="40"
+                            height="18"
+                          />
+                        </a>
+                        <a
+                          href="https://discord.gg/hUAksuANZ4"
+                          aria-label="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        >
+                          <img
+                            src="/images/icons/discordIcon.png"
+                            alt="Ikon"
+                            width="50"
+                            height="18"
+                          />
+                        </a>
+                      </div>
+                    </ul>
+                  </div>
+
+                        
+                
+                  </li>
                 </ul>
               </div>
             </div>
+            
+
+            
           </div>
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">

@@ -10,7 +10,7 @@ import { Metadata } from "next";
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Webdesign & Programvareutvikling | PolarCode Solutions",
   description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
   keywords: "webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Webdesign & Programvareutvikling | PolarCode Solutions",
     description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
-    url: "https://polarcode.solutions",
+    url: "https://www.polarcode.solutions/",
     images: [
       {
         url: "/images/logo/croppedPolarLogo.png",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions"
+    canonical: "https://www.polarcode.solutions/"
   }
 };
 
