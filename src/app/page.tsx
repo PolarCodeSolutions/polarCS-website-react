@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://www.polarcode.solutions/",
     images: [
       {
-        url: "/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
