@@ -1,8 +1,6 @@
-import SharePost from "@/components/Blog/SharePost";
+"use strict";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-import Head from 'next/head';
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

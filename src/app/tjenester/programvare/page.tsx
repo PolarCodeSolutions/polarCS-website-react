@@ -1,5 +1,5 @@
 
-import SharePost from "@/components/Blog/SharePost";
+"use strict";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import React from 'react';
