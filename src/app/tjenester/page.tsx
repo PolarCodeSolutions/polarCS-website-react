@@ -3,6 +3,7 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
@@ -31,6 +32,26 @@ export const metadata: Metadata = {
 const Blog: React.FC = () => {
   return (
     <>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="/images/favicon.png" />
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-76N1PJZ11X');
+            `,
+          }}
+        />
+      </Head>
+      
       <Breadcrumb
         pageName="Tjenester vi tilbyr våre kunder"
         description="På denne siden finner du våre tjenester. Vi tilbyr en rekke tjenester som kan hjelpe deg med å utvikle og forbedre din bedrift. Våre tjenester inkluderer webdesign, apputvikling, digital markedsføring og mye mer."

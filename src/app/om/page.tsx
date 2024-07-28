@@ -3,6 +3,7 @@ import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
@@ -31,6 +32,26 @@ export const metadata: Metadata = {
 const AboutPage: React.FC = () => {
   return (
     <>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="/images/favicon.png" />
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-76N1PJZ11X');
+            `,
+          }}
+        />
+      </Head>
+      
       <Breadcrumb
         pageName="Innovativ Teknologi og Bærekraftige Løsninger gjennom Åpen Kildekode"
         description="Vi ser for oss en verden hvor teknologi er tilgjengelig, åpen og tilpasset alles behov. Vår visjon er å være en sterk bidragsyter innen utvikling av innovative og brukervennlige teknologiske løsninger som forbedrer menneskers liv og virksomheter. Vi jobber mot å skape en fremtid hvor samarbeid og åpen kildekode fremmer bærekraftig utvikling og gir alle muligheten til å bidra og dra nytte av teknologiske fremskritt."
