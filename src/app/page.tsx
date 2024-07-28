@@ -55,6 +55,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="https://www.polarcode.solutions/images/favicon.png" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/favicon.png"></meta>
 
         <script
           type="application/ld+json"
