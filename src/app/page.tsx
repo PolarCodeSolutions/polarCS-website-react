@@ -57,6 +57,7 @@ export default function Home() {
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
+        <meta property="fb:app_id" content="1345767586400332" />
 
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
