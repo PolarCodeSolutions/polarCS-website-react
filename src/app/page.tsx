@@ -61,8 +61,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.polarcode.solutions/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.polarcode.solutions/images/polarPreviewGen.webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
+
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
         
         <script
