@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://www.polarcode.solutions/",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/polarPreview.jpg",
+        url: "https://www.polarcode.solutions/images/polarPreviewGen.webp",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
@@ -60,7 +60,7 @@ export default function Home() {
         <meta property="og:description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
         <meta property="og:url" content="https://www.polarcode.solutions/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.polarcode.solutions/images/polarPreview.jpg" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/polarPreviewGen.webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
