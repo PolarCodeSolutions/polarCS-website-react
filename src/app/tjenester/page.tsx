@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     url: "https://www.polarcode.solutions/tjenester",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/tjenester/tjenester.webp",
         width: 800,
         height: 600,
-        alt: "PolarCode Solutions logo"
+        alt: "PolarCode Solutions services preview image"
       }
     ]
   },
@@ -30,6 +30,27 @@ export const metadata: Metadata = {
 };
 
 const Blog: React.FC = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "url": "https://www.polarcode.solutions/tjenester",
+    "name": "Tjenester vi tilbyr våre kunder",
+    "description": "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PolarCode Solutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png"
+      }
+    },
+    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "PolarCode Solutions"
+    }
+  };
+
   return (
     <>
       <Head>
@@ -37,6 +58,27 @@ const Blog: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Tjenester vi tilbyr våre kunder | PolarCode Solutions" />
+        <meta
+          property="og:description"
+          content="Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions."
+        />
+        <meta property="og:url" content="https://www.polarcode.solutions/tjenester" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/tjenester/tjenester.webp" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="PolarCode Solutions services preview image" />
+        <meta property="fb:app_id" content="1345767586400332" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
@@ -50,8 +92,6 @@ const Blog: React.FC = () => {
             `,
           }}
         />
-        
-
       </Head>
       
       <Breadcrumb
@@ -60,7 +100,6 @@ const Blog: React.FC = () => {
       />
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
-
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
               <div

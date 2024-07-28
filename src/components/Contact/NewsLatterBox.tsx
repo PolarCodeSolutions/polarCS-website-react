@@ -1,12 +1,16 @@
 "use client";
 
+
 import { useTheme } from "next-themes";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const shareUrl = "https://www.polarcode.solutions/kontakt";
+  const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
 
   return (
     <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+     
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
         Kontakt oss på andre måter
       </h3>
@@ -27,10 +31,10 @@ const NewsLatterBox = () => {
         </p>            
 
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-          Vi svarer på alle henvendelser vi får.
+      Vi svarer på alle henvendelser vi får.
         </p>
       </div>
-
+      
       <div>
         <span className="absolute left-2 top-7">
           <svg
@@ -103,6 +107,7 @@ const NewsLatterBox = () => {
             </defs>
           </svg>
         </span>
+        
 
         <span className="absolute right-2 top-[140px]">
           <svg
@@ -246,8 +251,9 @@ const NewsLatterBox = () => {
             </defs>
           </svg>
         </span>
-      </div>
+      </div>      
     </div>
+
   );
 };
 

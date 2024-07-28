@@ -14,31 +14,69 @@ export const metadata: Metadata = {
     type: "website",
     title: "Om Oss | PolarCode Solutions",
     description: "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
-    url: "https://www.polarcode.solutions/om-oss",
+    url: "https://www.polarcode.solutions/om",
     images: [
       {
-        url: "URL til bilde",
+        url: "https://www.polarcode.solutions/images/about/barekraft.webp",
         width: 800,
         height: 600,
-        alt: "PolarCode Solutions logo"
+        alt: "PolarCode Solutions bærekraft og teknologi image",
       }
     ]
   },
   alternates: {
-    canonical: "https://www.polarcode.solutions/om-oss"
+    canonical: "https://www.polarcode.solutions/om"
   }
 };
 
 const AboutPage: React.FC = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PolarCode Solutions",
+    "url": "https://www.polarcode.solutions",
+    "logo": "https://www.polarcode.solutions/logo.png",
+    "description": "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+47 95 04 45 86",
+      "contactType": "Customer Service",
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61560407736033",
+      "https://discord.gg/hUAksuANZ4",
+    ],
+  };
+
   return (
     <>
       <Head>
-        
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="https://polarcode.solutions/images/favicon.png" />
+        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
 
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Om Oss | PolarCode Solutions" />
+        <meta
+          property="og:description"
+          content="Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier."
+        />
+        <meta property="og:url" content="https://www.polarcode.solutions/om" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/about/barekraft.webp" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="PolarCode Solutions bærekraft og teknologi image" />
+        <meta property="fb:app_id" content="1345767586400332" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
         <script

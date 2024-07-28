@@ -1,4 +1,5 @@
 "use strict";
+import React from "react";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
@@ -33,7 +34,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+const Home: React.FC = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PolarCode Solutions",
+    "url": "https://polarcode.solutions",
+    "logo": "https://polarcode.solutions/logo.png",
+    "description": "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+47 95 04 45 86",
+      "contactType": "Customer Service",
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61560407736033",
+      "https://discord.gg/hUAksuANZ4",
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -41,7 +60,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="https://www.polarcode.solutions/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" /> {/* Lagt til Apple touch icon */}
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
@@ -56,37 +75,22 @@ export default function Home() {
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
         <meta property="fb:app_id" content="1345767586400332" />
-
+      </Head>
+      <div itemScope itemType="https://schema.org/WebPage">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "PolarCode Solutions",
-              "url": "https://polarcode.solutions",
-              "logo": "https://polarcode.solutions/logo.png",
-              "description": "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+47 95 04 45 86",
-                "contactType": "Customer Service",
-              },
-              "sameAs": [
-                "https://www.facebook.com/profile.php?id=61560407736033",
-                "https://discord.gg/hUAksuANZ4",
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </Head>
-      <ScrollUp />
-      <Hero />
-      <Blog />
-      <Features />
-      <Brands />
-      <Pricing />
-      <Contact />
+        <ScrollUp />
+        <Hero/>
+        <Blog/>
+        <Features/>
+        <Brands />
+        <Pricing />
+        <Contact />
+      </div>
     </>
   );
-}
+};
+
+export default Home;

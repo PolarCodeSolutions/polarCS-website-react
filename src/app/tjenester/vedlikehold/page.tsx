@@ -3,6 +3,11 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import { Metadata } from "next";
 import Head from 'next/head';
+import {
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon
+} from 'react-share';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
@@ -13,31 +18,77 @@ export const metadata: Metadata = {
     type: "website",
     title: "Vedlikehold og support-tjenester | PolarCode Solutions",
     description: "Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt.",
-    url: "https://www.polarcode.solutions/vedlikehold",
+    url: "https://www.polarcode.solutions/tjenester/vedlikehold",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/tjenester/vedlikehold.webp",
         width: 800,
         height: 600,
-        alt: "PolarCode Solutions logo"
+        alt: "PolarCode Solutions maintenance services preview image"
       }
     ]
   },
   alternates: {
-    canonical: "https://www.polarcode.solutions/vedlikehold"
+    canonical: "https://www.polarcode.solutions/tjenester/vedlikehold"
   }
 };
 
 const BlogDetailsPage: React.FC = () => {
+  const shareUrl = "https://www.polarcode.solutions/tjenester/vedlikehold";
+  const title = "Vedlikehold og support-tjenester | PolarCode Solutions";
+  
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": "Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt.",
+    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "PolarCode Solutions",
+      "logo": "https://www.polarcode.solutions/logo.png"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PolarCode Solutions",
+      "logo": "https://www.polarcode.solutions/logo.png"
+    },
+    "url": shareUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": shareUrl
+    }
+  };
+
   return (
     <>
       <Head>
-        
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Vedlikehold og support-tjenester | PolarCode Solutions" />
+        <meta
+          property="og:description"
+          content="Oppdag våre vedlikeholdstjenester hos PolarCode Solutions. Vi tilbyr pålitelig vedlikehold for å sikre at dine nettsider og programvare fungerer optimalt."
+        />
+        <meta property="og:url" content="https://www.polarcode.solutions/tjenester/vedlikehold" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/tjenester/vedlikehold.webp" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="PolarCode Solutions maintenance services preview image" />
+        <meta property="fb:app_id" content="1345767586400332" />
 
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
         <script
@@ -50,7 +101,6 @@ const BlogDetailsPage: React.FC = () => {
             `,
           }}
         />
-        
       </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
@@ -103,6 +153,15 @@ const BlogDetailsPage: React.FC = () => {
                         </span>
                         2024
                       </p>
+                      <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener noreferrer">
+                          <FacebookIcon size={32} round />
+                        </a>
+                        <a href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`} target="_blank" rel="noopener noreferrer">
+                          <TwitterIcon size={32} round />
+                        </a>
+                        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${title}&summary=Oppdag%20våre%20skreddersydde%20webdesigntjenester%20hos%20PolarCode%20Solutions.%20Vi%20skaper%20unike,%20brukervennlige%20nettsteder%20som%20hjelper%20din%20bedrift%20å%20skille%20seg%20ut.`} target="_blank" rel="noopener noreferrer">
+                          <LinkedinIcon size={32} round />
+                        </a>
                     </div>
                   </div>
                   <div className="mb-5">

@@ -1,6 +1,13 @@
 import Image from "next/image";
+import {
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon
+} from 'react-share';
 
 const AboutSectionTwo = () => {
+  const shareUrl = "https://www.polarcode.solutions/om-oss";
+  const title = "Om Oss | PolarCode Solutions";
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -72,6 +79,17 @@ const AboutSectionTwo = () => {
             </div>
           </div>
         </div>
+        <div style={{ display: 'flex', gap: '10px' }}>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener noreferrer">
+                  <FacebookIcon size={32} round />
+                </a>
+                <a href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`} target="_blank" rel="noopener noreferrer">
+                  <TwitterIcon size={32} round />
+                </a>
+                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${title}&summary=Oppdag%20våre%20skreddersydde%20webdesigntjenester%20hos%20PolarCode%20Solutions.%20Vi%20skaper%20unike,%20brukervennlige%20nettsteder%20som%20hjelper%20din%20bedrift%20å%20skille%20seg%20ut.`} target="_blank" rel="noopener noreferrer">
+                  <LinkedinIcon size={32} round />
+                </a>
+              </div>
       </div>
     </section>
   );

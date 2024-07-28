@@ -1,5 +1,10 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import {
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon
+} from 'react-share';
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,6 +13,8 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const shareUrl = "https://www.polarcode.solutions/om-oss";
+  const title = "Om Oss | PolarCode Solutions";
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -71,6 +78,17 @@ const AboutSectionOne = () => {
             </div>
           </div>
         </div>
+        <div style={{ display: 'flex', gap: '10px' }}>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener noreferrer">
+                  <FacebookIcon size={32} round />
+                </a>
+                <a href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`} target="_blank" rel="noopener noreferrer">
+                  <TwitterIcon size={32} round />
+                </a>
+                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${title}&summary=Oppdag%20våre%20skreddersydde%20webdesigntjenester%20hos%20PolarCode%20Solutions.%20Vi%20skaper%20unike,%20brukervennlige%20nettsteder%20som%20hjelper%20din%20bedrift%20å%20skille%20seg%20ut.`} target="_blank" rel="noopener noreferrer">
+                  <LinkedinIcon size={32} round />
+                </a>
+              </div>
       </div>
     </section>
   );
