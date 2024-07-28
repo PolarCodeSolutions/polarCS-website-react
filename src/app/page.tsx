@@ -12,15 +12,12 @@ import Head from "next/head";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Webdesign & Programvareutvikling | PolarCode Solutions",
-  description:
-    "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
-  keywords:
-    "webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
+  description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+  keywords: "webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
   openGraph: {
     type: "website",
     title: "Webdesign & Programvareutvikling | PolarCode Solutions",
-    description:
-      "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+    description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
     url: "https://www.polarcode.solutions/",
     images: [
       {
@@ -59,19 +56,6 @@ export default function Home() {
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
         <meta property="fb:app_id" content="1345767586400332" />
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-76N1PJZ11X');
-            `,
-          }}
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -81,8 +65,7 @@ export default function Home() {
               "name": "PolarCode Solutions",
               "url": "https://polarcode.solutions",
               "logo": "https://polarcode.solutions/logo.png",
-              "description":
-                "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
+              "description": "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+47 95 04 45 86",
