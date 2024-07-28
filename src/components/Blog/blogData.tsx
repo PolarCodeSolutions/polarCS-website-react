@@ -3,6 +3,7 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
+    url: "https://www.polarcode.solutions/tjenester/webdesign",
     lenke: "tjenester/webdesign",
     title: "Vi lager nettside for bedriften din",
     paragraph:"Vi tar arbeidet og hjelper med å fremstille en kravspesifikasjon, design og utvikling av nettsiden",
@@ -14,9 +15,11 @@ const blogData: Blog[] = [
     },
     tags: ["webdesign"],
     publishDate: "2024",
+    
   },
   {
     id: 2,
+    url: "https://www.polarcode.solutions/tjenester/programvare",
     lenke: "tjenester/programvare",
     title: "Utvikling av programvare",
     paragraph:
@@ -32,6 +35,7 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
+    url: "https://www.polarcode.solutions/tjenester/vedlikehold",
     lenke: "tjenester/vedlikehold",
     title: "Support og vedlikehold av nettsider og programvare",
     paragraph:

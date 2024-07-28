@@ -101,16 +101,16 @@ const Footer = () => {
                 </p>
                 <ul>
                 <div>
-                <FacebookShareButton url={url} title={title}>
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                <TwitterShareButton url={url} title={title}>
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-                <LinkedinShareButton url={url} title={title}>
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-              </div>
+                  <FacebookShareButton url={url} title={title}>
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+                  <TwitterShareButton url={url} title={title}>
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
+                  <LinkedinShareButton url={url} title={title}>
+                    <LinkedinIcon size={32} round />
+                  </LinkedinShareButton>
+                </div>
                 </ul>
               </div>
         

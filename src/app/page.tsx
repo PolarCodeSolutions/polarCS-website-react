@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Webdesign & Programvareutvikling | PolarCode Solutions",
   description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
-  keywords: "webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
+  keywords: "nettside helgeland, webdesign helgeland, webdesign nordland, hjemmeside, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
   openGraph: {
     type: "website",
     title: "Webdesign & Programvareutvikling | PolarCode Solutions",
@@ -41,6 +41,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="https://www.polarcode.solutions/images/favicon.png" />
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" /> {/* Lagt til Apple touch icon */}
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
