@@ -32,11 +32,6 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="/images/favicon.png" />
-        
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
         <script
@@ -49,6 +44,11 @@ const ContactPage: React.FC = () => {
             `,
           }}
         />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="https://polarcode.solutions/images/favicon.png" />
+        
       </Head>
       
       <Breadcrumb
