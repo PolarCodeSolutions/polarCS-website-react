@@ -55,8 +55,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="https://www.polarcode.solutions/images/favicon.png" />
-        <meta property="og:image" content="https://www.polarcode.solutions/images/favicon.png"></meta>
-
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
+        <meta property="og:description" content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt." />
+        <meta property="og:url" content="https://www.polarcode.solutions/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="PolarCode Solutions logo" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
