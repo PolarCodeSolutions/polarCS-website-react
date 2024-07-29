@@ -21,7 +21,7 @@ const blogData: Blog[] = [
     id: 2,
     url: "https://www.polarcode.solutions/tjenester/programvare",
     lenke: "tjenester/programvare",
-    title: "Utvikling av programvare",
+    title: "Utvikling av programvareløsninger",
     paragraph:
       "Vi utvikler programvare for bedrifter og privatpersoner.",
     image: "/images/tjenester/programvare.webp",
@@ -37,7 +37,7 @@ const blogData: Blog[] = [
     id: 3,
     url: "https://www.polarcode.solutions/tjenester/vedlikehold",
     lenke: "tjenester/vedlikehold",
-    title: "Support og vedlikehold av nettsider og programvare",
+    title: "Support og vedlikehold av nettsider og systemer",
     paragraph:
       "Vi tilbyr support og vedlikehold av nettsider og programvare.",
     image: "/images/tjenester/vedlikehold.webp",

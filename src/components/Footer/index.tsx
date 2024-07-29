@@ -58,7 +58,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/webdesign"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Webdesign
+                      Les mer om våre Webdesign-tjenester
                     </Link>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/programvare"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Programvare
+                      Les mer om våre Programvareutvikling
                     </Link>
                   </li>
                   <li>
@@ -74,7 +74,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/vedlikehold"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Vedlikehold
+                      Les mer om våre Vedlikeholdstjenester
                     </Link>
                   </li>
                   <li>
@@ -82,7 +82,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Tjenester
+                      Se alle tjenester
                     </Link>
                   </li>
                   <li>
@@ -90,7 +90,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/om"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Om oss
+                      Les om vår visjon
                     </Link>
                   </li>
                   <li>
