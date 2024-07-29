@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Vår kompetanse"
-            paragraph="En liten oversikt over hva vi kan hjelpe deg med å utvikle."
+            paragraph="En liten oversikt over hva vi kan hjelpe deg med å utvikle. Trykk på pilene for å se mer."
             center
           />
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">

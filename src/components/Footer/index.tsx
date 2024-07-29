@@ -131,7 +131,7 @@ const Footer = () => {
                       href="/kontakt"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Kontakt oss
+                      Ta kontakt med oss
                     </Link>
                   </li>
                 </ul>

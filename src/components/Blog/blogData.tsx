@@ -13,7 +13,7 @@ const blogData: Blog[] = [
       image: "/images/blog/morten.png",
       designation: "Webdesign og utvikler",
     },
-    tags: ["webdesign"],
+    tags: ["Nettsider"],
     publishDate: "2024",
     
   },
@@ -30,7 +30,7 @@ const blogData: Blog[] = [
       image: "/images/blog/asgeir.jpg",
       designation: "Programvare ingniør",
     },
-    tags: ["software"],
+    tags: ["Programvaresystemer"],
     publishDate: "2024",
   },
   {
@@ -46,7 +46,7 @@ const blogData: Blog[] = [
       image: "/images/logo/croppedPolarLogo.png",
       designation: "Webdesign, programvare, vedlikehold, support",
     },
-    tags: ["Support"],
+    tags: ["Vedlikehold"],
     publishDate: "2024",
   },
 ];

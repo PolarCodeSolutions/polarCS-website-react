@@ -15,7 +15,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {paragraph}
         </p>
         <details className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-            <summary>Vis mer om {title}</summary>
+            <summary></summary>
             {dropdownInfo}
           </details>
         
