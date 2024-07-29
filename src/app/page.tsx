@@ -32,7 +32,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.polarcode.solutions/",
   },
+  icons: {
+    icon: "https://www.polarcode.solutions/images/favicon.png",
+  },
 };
+
 
 const Home: React.FC = () => {
   const jsonLd = {
