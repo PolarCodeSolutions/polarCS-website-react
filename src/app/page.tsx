@@ -32,13 +32,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.polarcode.solutions/",
   },
-  icons: {
-    icon: "https://www.polarcode.solutions/images/favicon.png",
-    apple:"https://www.polarcode.solutions/images/favicon.png",
-    
-  },
+    icons: [
+      { rel: "icon", url: "https://www.polarcode.solutions/images/favicon.png" },
+      { rel: "apple-touch-icon", url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" },
+    ],
 };
-
 
 const Home: React.FC = () => {
   const jsonLd = {
