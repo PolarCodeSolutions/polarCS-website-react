@@ -12,12 +12,12 @@ import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.polarcode.solutions/"),
-  title: "Webdesign & Programvareutvikling | PolarCode Solutions",
+  title: "Webdesign og Programvare hos PolarCode Solutions",
   description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
   keywords: "nettside helgeland, webdesign helgeland, webdesign nordland, hjemmeside, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
   openGraph: {
     type: "website",
-    title: "Webdesign & Programvareutvikling | PolarCode Solutions",
+    title: "Webdesign hos Programvare hos PolarCode Solutions",
     description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
     url: "https://www.polarcode.solutions/",
     images: [
@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "https://www.polarcode.solutions/images/favicon.png",
+    apple:"https://www.polarcode.solutions/images/favicon.png",
+    
   },
 };
 
@@ -67,7 +69,7 @@ const Home: React.FC = () => {
         <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Webdesign & Programvareutvikling | PolarCode Solutions" />
+        <meta property="og:title" content="Webdesign og Programvareutvikling | PolarCode Solutions" />
         <meta
           property="og:description"
           content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt."
