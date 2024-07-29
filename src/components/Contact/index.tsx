@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
               data-wow-delay=".15s"
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Har du spørsmål? Vi svarer gjerne!
+                Lurer du på noe? Vi svarer så fort vi kan!
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
                 Vi er her for å hjelpe deg. Vennligst fyll ut skjemaet nedenfor og vi vil svare deg så snart som mulig.

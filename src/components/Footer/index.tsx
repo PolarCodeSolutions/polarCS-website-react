@@ -74,7 +74,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/vedlikehold"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      LLes om Vedlikeholdstjenester
+                      Les om Vedlikeholdstjenester
                     </Link>
                   </li>
                   <li>
