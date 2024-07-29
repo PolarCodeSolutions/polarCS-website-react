@@ -58,7 +58,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/webdesign"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Utforsk våre tilpassede Webdesign-løsninger
+                      Utforsk Webdesign-løsninger
                     </Link>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/programvare"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Oppdag våre avanserte Programvareløsninger
+                      Se våre Programvareutviklingstjenester
                     </Link>
                   </li>
                   <li>
@@ -74,7 +74,7 @@ const Footer = () => {
                       href="https://www.polarcode.solutions/tjenester/vedlikehold"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Les mer om våre Vedlikeholdstjenester
+                      LLes om Vedlikeholdstjenester
                     </Link>
                   </li>
                   <li>
