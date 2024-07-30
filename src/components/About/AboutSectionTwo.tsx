@@ -6,7 +6,7 @@ import {
 } from 'react-share';
 
 const AboutSectionTwo = () => {
-  const shareUrl = "https://polarcode.solutions/om";
+  const shareUrl = "https://www.polarcode.solutions/om";
   const title = "Om Oss | PolarCode Solutions";
   return (
     <section className="py-16 md:py-20 lg:py-28">

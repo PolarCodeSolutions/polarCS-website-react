@@ -10,7 +10,7 @@ import {
 } from 'react-share';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions/"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
   description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
   keywords: "kontakt, webdesign, programvareutvikling, PolarCode Solutions, tilbud, informasjon",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Kontakt Oss for tilbud og info | PolarCode Solutions",
     description: "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
-    url: "https://polarcode.solutions/kontakt",
+    url: "https://www.polarcode.solutions/kontakt",
     images: [
       {
-        url: "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+        url: "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions logo"
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 const ContactPage: React.FC = () => {
-  const shareUrl = "https://polarcode.solutions/kontakt";
+  const shareUrl = "https://www.polarcode.solutions/kontakt";
   const title = "Kontakt oss for tilbud og info | PolarCode Solutions";
 
   const jsonLd = {
@@ -42,16 +42,16 @@ const ContactPage: React.FC = () => {
     "@type": "ContactPage",
     "headline": title,
     "description": "Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg.",
-    "image": "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
     "author": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://polarcode.solutions/images/logo/croppedPolarLogo.png"
+      "logo": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://polarcode.solutions/images/logo/croppedPolarLogo.png"
+      "logo": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png"
     },
     "url": shareUrl,
     "mainEntityOfPage": {
@@ -66,8 +66,8 @@ const ContactPage: React.FC = () => {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="https://polarcode.solutions/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <link rel="icon" href="https://www.polarcode.solutions/images/favicon.png" />
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Kontakt Oss for tilbud og info | PolarCode Solutions" />
@@ -75,9 +75,9 @@ const ContactPage: React.FC = () => {
           property="og:description"
           content="Kontakt PolarCode Solutions for informasjon om våre tjenester innen webdesign og programvareutvikling. Vi er her for å hjelpe deg."
         />
-        <meta property="og:url" content="https://polarcode.solutions/kontakt" />
+        <meta property="og:url" content="https://www.polarcode.solutions/kontakt" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions logo" />

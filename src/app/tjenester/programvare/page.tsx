@@ -12,7 +12,7 @@ import {
 } from 'react-share';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://polarcode.solutions/"),
+  metadataBase: new URL("https://www.polarcode.solutions/"),
   title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
   description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
   keywords: "programvare, utviklingsinformasjon, skreddersydde løsninger, PolarCode Solutions",
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Programvare & utviklingsinformasjon | PolarCode Solutions",
     description: "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
-    url: "https://polarcode.solutions/tjenester/programvare",
+    url: "https://www.polarcode.solutions/tjenester/programvare",
     images: [
       {
-        url: "https://polarcode.solutions/images/tjenester/programvare.webp",
+        url: "https://www.polarcode.solutions/images/tjenester/programvare.webp",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions software preview image"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 const BlogDetailsPage: React.FC = () => {
-  const shareUrl = "https://polarcode.solutions/tjenester/programvare";
+  const shareUrl = "https://www.polarcode.solutions/tjenester/programvare";
   const title = "Programvare & utviklingsinformasjon | PolarCode Solutions";
   
   const jsonLd = {
@@ -44,16 +44,16 @@ const BlogDetailsPage: React.FC = () => {
     "@type": "BlogPosting",
     "headline": title,
     "description": "Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov.",
-    "image": "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
     "author": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://polarcode.solutions/logo.png"
+      "logo": "https://www.polarcode.solutions/logo.png"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://polarcode.solutions/logo.png"
+      "logo": "https://www.polarcode.solutions/logo.png"
     },
     "url": shareUrl,
     "mainEntityOfPage": {
@@ -69,7 +69,7 @@ const BlogDetailsPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Programvare & utviklingsinformasjon | PolarCode Solutions" />
@@ -77,9 +77,9 @@ const BlogDetailsPage: React.FC = () => {
           property="og:description"
           content="Utforsk våre programvareutviklingstjenester hos PolarCode Solutions. Vi leverer skreddersydde løsninger som møter dine unike behov."
         />
-        <meta property="og:url" content="https://polarcode.solutions/tjenester/programvare" />
+        <meta property="og:url" content="https://www.polarcode.solutions/tjenester/programvare" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://polarcode.solutions/images/tjenester/programvare.webp" />
+        <meta property="og:image" content="https://www.polarcode.solutions/images/tjenester/programvare.webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions software preview image" />

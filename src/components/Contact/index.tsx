@@ -10,7 +10,7 @@ import NewsLatterBox from './NewsLatterBox';
 
 const Contact: React.FC = () => {
   const [result, setResult] = useState<string>('');
-  const shareUrl = "https://polarcode.solutions/kontakt";
+  const shareUrl = "https://www.polarcode.solutions/kontakt";
   const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
