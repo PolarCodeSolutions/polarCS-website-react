@@ -91,5 +91,3 @@ Developed by PolarCode Solutions & NextJSTemplates © 2024 with love for coding.
 </a>
 
 
-![image](https://github.com/user-attachments/assets/087df89e-2772-46a1-bc91-68e2980b6f1c)
-
