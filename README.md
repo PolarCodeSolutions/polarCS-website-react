@@ -76,7 +76,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 For any questions or support, feel free to contact us:
 
 - **Phone:** +47 950 44 586
-- **Email:** [post@polarcode.solutions](mailto:post@polarcode.solutions)
+- **Email:** [contact@polarcode.solutions](mailto:contact@polarcode.solutions)
 - **Address:** Mo i Rana, Nordland, Norway
 
 Visit our website for more information: [polarcode.solutions](https://polarcode.solutions)
