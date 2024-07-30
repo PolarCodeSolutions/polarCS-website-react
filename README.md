@@ -87,7 +87,6 @@ Developed by PolarCode Solutions & NextJSTemplates © 2024 with love for coding.
 
 ## SEO on this page
 
-<a href="https://freetools.seobility.net/en/seocheck/polarcode.solutions"><img src="https://freetools.seobility.net/widget/widget.png?url=https://www.polarcode.solutions" alt="Seobility Score für polarcode.solutions"></a>
-
+<a href="https://freetools.seobility.net/en/seocheck/polarcode.solutions"><img src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions" alt="polarcode.solutions"></a>
 ![image](https://github.com/user-attachments/assets/087df89e-2772-46a1-bc91-68e2980b6f1c)
 
