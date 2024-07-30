@@ -1,6 +1,6 @@
 {
-    "homepage": "https://bjorgeh.github.io/polarWeb",
-    "name": "bjorgeh",
+    "homepage": "https://bjorgeh.github.io/polarCS-website-react/",
+    "name": "polarCS-website-react",
     "version": "2.0.0",
     "private": true,
     "scripts": {
