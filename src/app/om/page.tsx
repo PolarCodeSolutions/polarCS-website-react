@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.polarcode.solutions/"),
+  metadataBase: new URL("https://polarcode.solutions/"),
   title: "Om Oss | PolarCode Solutions",
   description: "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
   keywords: "Om oss, PolarCode Solutions, webdesign, programvareutvikling, team, ekspertise, historie, verdier",
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Om Oss | PolarCode Solutions",
     description: "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
-    url: "https://www.polarcode.solutions/om",
+    url: "https://polarcode.solutions/om",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/about/barekraft.webp",
+        url: "https://polarcode.solutions/images/about/barekraft.webp",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions bærekraft og teknologi image",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://www.polarcode.solutions/om"
+    canonical: "https://polarcode.solutions/om"
   }
 };
 
@@ -34,8 +34,8 @@ const AboutPage: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "PolarCode Solutions",
-    "url": "https://www.polarcode.solutions",
-    "logo": "https://www.polarcode.solutions/logo.png",
+    "url": "https://polarcode.solutions",
+    "logo": "https://polarcode.solutions/logo.png",
     "description": "Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -63,9 +63,9 @@ const AboutPage: React.FC = () => {
           property="og:description"
           content="Lær mer om PolarCode Solutions, vårt team, og vår ekspertise innen webdesign og programvareutvikling. Utforsk vår historie og verdier."
         />
-        <meta property="og:url" content="https://www.polarcode.solutions/om" />
+        <meta property="og:url" content="https://polarcode.solutions/om" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.polarcode.solutions/images/about/barekraft.webp" />
+        <meta property="og:image" content="https://polarcode.solutions/images/about/barekraft.webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions bærekraft og teknologi image" />

@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
-  const shareUrl = "https://www.polarcode.solutions/kontakt";
+  const shareUrl = "https://polarcode.solutions/kontakt";
   const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
 
   return (

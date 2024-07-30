@@ -1,34 +1,38 @@
 {
-  "name": "startup-nextjs-template",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "emailjs-com": "^3.2.0",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.2.5",
-    "next": "^14.2.5",
-    "next-themes": "^0.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-ga4": "^2.1.0",
-    "react-modal-video": "^2.0.1",
-    "react-share": "^5.1.0",
-    "sharp": "^0.33.4"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.9",
-    "@types/react": "^18.2.33",
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  }
+    "homepage": "https://bjorgeh.github.io/polarWeb",
+    "name": "bjorgeh",
+    "version": "2.0.0",
+    "private": true,
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "emailjs-com": "^3.2.0",
+        "eslint": "^8.56.0",
+        "eslint-config-next": "^14.2.5",
+        "gh-pages": "^6.1.1",
+        "next": "^14.2.5",
+        "next-themes": "^0.2.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-ga4": "^2.1.0",
+        "react-modal-video": "^2.0.1",
+        "react-share": "^5.1.0",
+        "sharp": "^0.33.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.8.9",
+        "@types/react": "^18.2.33",
+        "autoprefixer": "^10.4.17",
+        "postcss": "^8.4.35",
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.11",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.3.3"
+    }
 }

@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.polarcode.solutions/"),
+  metadataBase: new URL("https://polarcode.solutions/"),
   title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
   description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
   keywords: "polar tjenester, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "Tjenester vi tilbyr våre kunder | PolarCode Solutions",
     description: "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
-    url: "https://www.polarcode.solutions/tjenester",
+    url: "https://polarcode.solutions/tjenester",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/tjenester/tjenester.webp",
+        url: "https://polarcode.solutions/images/tjenester/tjenester.webp",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions services preview image"
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://www.polarcode.solutions/tjenester"
+    canonical: "https://polarcode.solutions/tjenester"
   }
 };
 
@@ -33,7 +33,7 @@ const Blog: React.FC = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "url": "https://www.polarcode.solutions/tjenester",
+    "url": "https://polarcode.solutions/tjenester",
     "name": "Tjenester vi tilbyr våre kunder",
     "description": "Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions.",
     "publisher": {
@@ -41,10 +41,10 @@ const Blog: React.FC = () => {
       "name": "PolarCode Solutions",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png"
+        "url": "https://polarcode.solutions/images/logo/croppedPolarLogo.png"
       }
     },
-    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "image": "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
     "author": {
       "@type": "Organization",
       "name": "PolarCode Solutions"
@@ -58,7 +58,7 @@ const Blog: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Tjenester vi tilbyr våre kunder | PolarCode Solutions" />
@@ -66,9 +66,9 @@ const Blog: React.FC = () => {
           property="og:description"
           content="Utforsk våre tjenester innen skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for å få din bedrift på nett med PolarCode Solutions."
         />
-        <meta property="og:url" content="https://www.polarcode.solutions/tjenester" />
+        <meta property="og:url" content="https://polarcode.solutions/tjenester" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.polarcode.solutions/images/tjenester/tjenester.webp" />
+        <meta property="og:image" content="https://polarcode.solutions/images/tjenester/tjenester.webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions services preview image" />

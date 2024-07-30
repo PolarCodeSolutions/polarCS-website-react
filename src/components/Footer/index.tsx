@@ -11,7 +11,7 @@ import {
   LinkedinIcon
 } from 'react-share';
 
-const url = "https://www.polarcode.solutions/";
+const url = "https://polarcode.solutions/";
 const title = "Profesjonell Webdesign og Programvareutvikling | PolarCode Solutions";
 
 const Footer = () => {
@@ -55,7 +55,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/tjenester/webdesign"
+                      href="https://polarcode.solutions/tjenester/webdesign"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Utforsk Webdesign-løsninger
@@ -63,7 +63,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/tjenester/programvare"
+                      href="https://polarcode.solutions/tjenester/programvare"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Se våre Programvareutviklingstjenester
@@ -71,7 +71,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/tjenester/vedlikehold"
+                      href="https://polarcode.solutions/tjenester/vedlikehold"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Les om Vedlikeholdstjenester
@@ -79,7 +79,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/tjenester"
+                      href="https://polarcode.solutions/tjenester"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Se alle tjenester
@@ -87,7 +87,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/om"
+                      href="https://polarcode.solutions/om"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Les om vår visjon
@@ -145,7 +145,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/kontakt"
+                      href="https://polarcode.solutions/kontakt"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       +47 950 44 586
@@ -153,7 +153,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/kontakt"
+                      href="https://polarcode.solutions/kontakt"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       contact@polarcode.solutions
@@ -161,7 +161,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.polarcode.solutions/kontakt"
+                      href="https://polarcode.solutions/kontakt"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Mo i Rana, Nordland, Norge
