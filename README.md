@@ -86,8 +86,6 @@ Visit our website for more information: [polarcode.solutions](https://polarcode.
 Developed by PolarCode Solutions & NextJSTemplates © 2024 with love for coding.
 
 ## SEO on this page
-<a href="https://freetools.seobility.net/en/seocheck/https://www.polarcode.solutions/">
-    <img src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions" alt="https://www.polarcode.solutions/">
-</a>
+<a href="https://freetools.seobility.net/en/seocheck/polarcode.solutions"><img src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions" alt="Seobility Score für polarcode.solutions"></a>
 
 
