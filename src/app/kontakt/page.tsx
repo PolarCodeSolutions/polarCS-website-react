@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/kontakt"
+    canonical: "https://www.polarcode.solutions/kontakt"
   }
 };
 

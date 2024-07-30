@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/tjenester/vedlikehold"
+    canonical: "https://www.polarcode.solutions/tjenester/vedlikehold"
   }
 };
 

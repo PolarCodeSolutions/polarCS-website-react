@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://polarcode.solutions/",
+    canonical: "https://www.polarcode.solutions/",
   },
     icons: [
       { rel: "icon", url: "https://www.polarcode.solutions/images/favicon.png" },
