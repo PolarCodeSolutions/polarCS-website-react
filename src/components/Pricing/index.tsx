@@ -1,11 +1,32 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import DynamicPricingBox from "./DynamicPricingBox";
+import OfferList from "./OfferList";
+
+type Service = {
+  text: string;
+  price: number;
+  status?: "active" | "inactive";
+};
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+
+  const services: Service[] = [
+    { text: "Nettstedshosting", price: 2500, status: "active" }, 
+    { text: "Domene administrasjon", price: 500, status: "active" }, 
+    { text: "Live support", price: 2000, status: "active" }, 
+    { text: "E-post support", price: 1200, status: "active" }, 
+    { text: "SEO", price: 1800, status: "active" }, 
+    { text: "Dedikert administrator", price: 1000, status: "active" }, 
+    { text: "Avansert sikkerhet (DDoS)", price: 1500, status: "active" }, 
+    { text: "Sikkerhetskopi av nettside", price: 900, status: "active" }, 
+    { text: "Kommersiell bruk", price: 800, status: "active" }, 
+    { text: "E-post administrasjon", price: 700, status: "active" }, 
+    { text: "Oppsett av hosting og DNS", price: 488, status: "active" } 
+  ];
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
@@ -57,105 +78,64 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           <PricingBox
             packageName="Lite"
-            price={isMonthly ? "449" : "4995"}
+            price={isMonthly ? "499" : "5495"}
             duration={isMonthly ? "mnd" : "år"}
             subtitle="Support avtale for små bedrifter og enkeltmannsforetak."
           >
-          <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn *" status="active" />
-          <OfferList text="Live support" status="inactive" />
-          <OfferList text="Kommersiell bruk" status="active" />
-          <OfferList text="E-postsupport" status="active" />
-          <OfferList text="Prioritert support" status="inactive" />
-          <OfferList text="Gratis livstidsoppdateringer" status="inactive" />
+            <OfferList text="Nettstedshosting" status="active" />
+            <OfferList text="Domene administrasjon" status="active" />
+            <OfferList text="Begrenset live support" status="active" />
+            <OfferList text="Kommersiell bruk" status="active" />
+            <OfferList text="E-postsupport" status="active" />
+            <OfferList text="Månedlige sikkerhetskopier" status="active" />
+            <OfferList text="1 E-postadresse (5GB)" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Basic"
-            price={isMonthly ? "695" : "7899"}
+            price={isMonthly ? "799" : "8499"}
             duration={isMonthly ? "mnd" : "år"}
-            subtitle="support avtale for små og mellomstore bedrifter, inkludert enkel support."
+            subtitle="Support avtale for små og mellomstore bedrifter, inkludert enkel support."
           >
-          <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn *" status="active" />
-          <OfferList text="Live support" status="active" />
-          <OfferList text="Kommersiell bruk" status="active" />
-          <OfferList text="E-postsupport" status="active" />
-          <OfferList text="Prioritert support" status="inactive" />
-          <OfferList text="Gratis livstidsoppdateringer" status="inactive" />
+            <OfferList text="Nettstedshosting" status="active" />
+            <OfferList text="Domene administrasjon" status="active" />
+            <OfferList text="Live support med utvidede åpningstider" status="active" />
+            <OfferList text="Kommersiell bruk" status="active" />
+            <OfferList text="E-postsupport" status="active" />
+            <OfferList text="Ukentlige sikkerhetskopier" status="active" />
+            <OfferList text="SEO-optimalisering" status="active" />
+            <OfferList text="3 E-postadresser (30GB)" status="active" />
+            <OfferList text="Full mobil synkronisering" status="active" />
           </PricingBox>
           <PricingBox
             packageName="Plus"
-            price={isMonthly ? "1105" : "11200"}
+            price={isMonthly ? "1199" : "12200"}
             duration={isMonthly ? "mnd" : "år"}
             subtitle="Support avtale for store bedrifter og organisasjoner, inkludert prioritert support."
           >
-          <OfferList text="Nettstedshosting" status="active" />
-          <OfferList text="Domenenavn *" status="active" />
-          <OfferList text="Live support" status="active" />
-          <OfferList text="Kommersiell bruk" status="active" />
-          <OfferList text="E-postsupport" status="active" />
-          <OfferList text="Prioritert support" status="active" />
-          <OfferList text="Gratis livstidsoppdateringer" status="active" />
+            <OfferList text="Nettstedshosting" status="active" />
+            <OfferList text="Domene administrasjon" status="active" />
+            <OfferList text="Live support 24/7" status="active" />
+            <OfferList text="Kommersiell bruk" status="active" />
+            <OfferList text="E-postsupport" status="active" />
+            <OfferList text="Daglige sikkerhetskopier" status="active" />
+            <OfferList text="Prioritert support" status="active" />
+            <OfferList text="Gratis livstidsoppdateringer" status="active" />
+            <OfferList text="Avansert sikkerhet (DDoS-beskyttelse)" status="active" />
+            <OfferList text="Dedikert kontoadministrator" status="active" />
+            <OfferList text="5 E-postadresser (70GB)" status="active" />
+            <OfferList text="Full mobil synkronisering" status="active" />
           </PricingBox>
+          <DynamicPricingBox
+            basePrice={isMonthly ? 0 : 0}
+            duration={isMonthly ? "år" : "år"}
+            packageName="Custom"
+            subtitle="Velg dine egne tjenester og få en skreddersydd plan."
+            services={services}
+          />
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 z-[-1]">
-        <svg
-          width="239"
-          height="601"
-          viewBox="0 0 239 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="-184.451"
-            y="600.973"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
-          />
-          <rect
-            opacity="0.3"
-            x="-188.201"
-            y="385.272"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_93:235"
-              x1="-90.1184"
-              y1="420.414"
-              x2="-90.1184"
-              y2="1131.65"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_93:235"
-              x1="-159.441"
-              y1="204.714"
-              x2="-159.441"
-              y2="915.952"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
       </div>
     </section>
   );
