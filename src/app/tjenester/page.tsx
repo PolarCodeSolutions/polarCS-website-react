@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://www.polarcode.solutions/tjenester"
+    canonical: "https://polarcode.solutions/tjenester"
   }
 };
 
