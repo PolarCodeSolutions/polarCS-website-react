@@ -86,8 +86,10 @@ Visit our website for more information: [polarcode.solutions](https://polarcode.
 Developed by PolarCode Solutions & NextJSTemplates © 2024 with love for coding.
 
 ## SEO on this page
-
 <a href="https://freetools.seobility.net/en/seocheck/https://www.polarcode.solutions/">
-    <img src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions" alt="https://www.polarcode.solutions/">
-</a>![image](https://github.com/user-attachments/assets/087df89e-2772-46a1-bc91-68e2980b6f1c)
+    <img src="https://freetools.seobility.net/widget/widget.png?url=https://www.polarcode.solutions/" alt="https://www.polarcode.solutions/">
+</a>
+
+
+![image](https://github.com/user-attachments/assets/087df89e-2772-46a1-bc91-68e2980b6f1c)
 
