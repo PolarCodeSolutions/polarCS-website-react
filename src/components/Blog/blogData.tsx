@@ -49,5 +49,21 @@ const blogData: Blog[] = [
     tags: ["Vedlikehold"],
     publishDate: "2024",
   },
+  {
+    id: 4,
+    url: "https://www.polarcode.solutions/tjenester/webhosting",
+    lenke: "tjenester/webhosting",
+    title: "Host nettsiden din hos oss",
+    paragraph:"Vårt webhotell er raskt og sikkert. Vi har en rekke løsninger for deg som ønsker å ha en nettside.",
+    image: "/images/tjenester/webhotell.webp",
+    author: {
+      name: "Asgeir Bjørgen Huskebakk",
+      image: "/images/blog/asgeir.jpg",
+      designation: "Webdesign og utvikler",
+    },
+    tags: ["webhosting"],
+    publishDate: "2024",
+    
+  },
 ];
 export default blogData;
