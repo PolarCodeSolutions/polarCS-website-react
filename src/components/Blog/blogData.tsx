@@ -28,7 +28,7 @@ const blogData: Blog[] = [
     author: {
       name: "Asgeir Bjørgen Huskebakk",
       image: "/images/blog/asgeir.jpg",
-      designation: "Programvare ingniør",
+      designation: "Programvare ingeniør",
     },
     tags: ["Programvaresystemer"],
     publishDate: "2024",
@@ -59,7 +59,7 @@ const blogData: Blog[] = [
     author: {
       name: "Asgeir Bjørgen Huskebakk",
       image: "/images/blog/asgeir.jpg",
-      designation: "Webdesign og utvikler",
+      designation: "Programvare ingeniør",
     },
     tags: ["webhosting"],
     publishDate: "2024",
