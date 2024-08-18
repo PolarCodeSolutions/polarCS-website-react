@@ -65,5 +65,21 @@ const blogData: Blog[] = [
     publishDate: "2024",
     
   },
+  {
+    id: 5,
+    url: "https://www.polarcode.solutions/tjenester/seo",
+    lenke: "tjenester/seo",
+    title: "Bruk oss for å øke synligheten din",
+    paragraph:"Vår SEO vil garantert øke søkemotorresultatene og omsetningen din.",
+    image: "/images/tjenester/seo.webp",
+    author: {
+      name: "PolarCode Solutions",
+      image: "/images/blog/morten.png",
+      designation: "seo",
+    },
+    tags: ["Search Engine Optimization"],
+    publishDate: "2024",
+    
+  },
 ];
 export default blogData;
