@@ -117,7 +117,7 @@ const BlogDetailsPage: React.FC = () => {
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
+                          <img
                             src="/images/blog/asgeir.jpg"
                             alt="author"
                             width={70}
@@ -180,7 +180,7 @@ const BlogDetailsPage: React.FC = () => {
                   Design og utvikling av programvare starter med en behovsanalyse hvor vi forstår dine mål, målgruppe og spesifikke krav. Basert på denne analysen utarbeider vi en detaljert plan og spesifikasjoner for programvaren. Deretter utformer vårt kreative team et designkonsept som reflekterer din merkevare og imøtekommer brukernes behov. Når designet er godkjent, går våre utviklere i gang med å kode programvaren ved hjelp av moderne teknologier, og sikrer at den fungerer optimalt på alle enheter. Etter utvikling gjennomfører vi grundig testing for å sikre feilfri funksjonalitet, brukervennlighet og sikkerhet. Når alle tester er fullført og godkjent, lanserer vi programvaren, håndterer den tekniske overføringen og tilbyr vedlikeholdstjenester for å holde programvaren oppdatert og sikker. Gjennom hele prosessen jobber vi tett med deg for å levere en programvareløsning som oppfyller dine behov og overgår dine forventninger.                  </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <Image
+                    <img
                       src="/images/tjenester-details/programvare.webp"
                       alt="image"
                       width={1200}
