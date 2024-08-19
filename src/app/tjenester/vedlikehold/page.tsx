@@ -115,7 +115,7 @@ const BlogDetailsPage: React.FC = () => {
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                        <Image
+                        <img
                           src="/images/logo/croppedPolarLogo.png"
                           alt="author"
                           width={70}
@@ -178,7 +178,7 @@ const BlogDetailsPage: React.FC = () => {
                   Vedlikehold av systemer og programvare begynner med en grundig vurdering av dine eksisterende løsninger og identifikasjon av områder som trenger oppdatering eller forbedring. Vi utarbeider en vedlikeholdsplan som inkluderer regelmessige oppdateringer, sikkerhetskontroller og ytelsesoptimaliseringer. Når planen er på plass, gjennomfører vårt team jevnlige oppgaver som å installere oppdateringer, rette eventuelle feil og overvåke systemets helse. Dette sikrer at alt fungerer effektivt, reduserer risikoen for nedetid og beskytter mot sikkerhetstrusler. Vi gir deg også rapporter og innsikt om systemets tilstand, slik at du alltid er oppdatert om eventuelle behov for videre tiltak. Ved å følge denne prosessen sørger vi for at dine teknologiske løsninger forblir stabile, sikre og effektive, noe som gir deg trygghet og lar deg fokusere på kjernevirksomheten.                  </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
+                      <img
                         src="/images/tjenester-details/vedlikehold.webp"
                         alt="image"
                         width={1200}

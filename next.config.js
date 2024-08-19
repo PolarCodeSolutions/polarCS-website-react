@@ -21,6 +21,7 @@ const nextConfig = {
             },
         ],
     },
+    output: 'export', // Legg til denne linjen for statisk eksport
 };
 
 module.exports = nextConfig;

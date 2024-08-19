@@ -41,7 +41,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
       className="relative w-full h-20 opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
     >
       <div className="hidden dark:block">
-        <Image
+        <img
           src={imageLight}
           alt={name}
           title={name}
@@ -52,7 +52,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         />
       </div>
       <div className="block dark:hidden">
-        <Image
+        <img
           src={image}
           alt={name}
           title={name}

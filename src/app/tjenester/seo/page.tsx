@@ -115,7 +115,7 @@ const BlogDetailsPage: React.FC = () => {
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                        <Image
+                        <img
                           src="/images/logo/croppedPolarLogo.png"
                           alt="author"
                           width={70}
@@ -179,7 +179,7 @@ const BlogDetailsPage: React.FC = () => {
                   <div className="mb-10 w-full overflow-hidden rounded">
                         
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <Image
+                      <img
                         src="/images/tjenester-details/seo-page.webp"
                         alt="image"
                         width={1200}

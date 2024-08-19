@@ -17,7 +17,7 @@ const AboutSectionTwo = () => {
               className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <Image
+              <img
                 src="/images/about/opensource.webp"
                 alt="about image"
                 width={800}
@@ -25,7 +25,7 @@ const AboutSectionTwo = () => {
                 style={{ objectFit: 'cover' }}
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
-              <Image
+              <img
                 src="/images/about/opensource.webp"
                 alt="about image"
                 width={800}
