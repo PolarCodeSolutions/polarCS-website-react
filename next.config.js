@@ -9,7 +9,7 @@ const nextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "www.polarcode.solutions",
+                hostname: "polarcode.solutions", //www.polarcode.solutions
                 port: "",
                 pathname: "/images/**",
             },

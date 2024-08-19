@@ -13,7 +13,7 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
-  const shareUrl = "https://www.polarcode.solutions/om";
+  const shareUrl = "https://polarcode.solutions/om";
   const title = "Om Oss | PolarCode Solutions";
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">

@@ -10,7 +10,7 @@ import {
 } from 'react-share';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.polarcode.solutions/"),
+  metadataBase: new URL("https://polarcode.solutions/"),
   title: "SEO og vedlikehold | PolarCode Solutions",
   description: "Oppdag våre Seo-tjenester hos PolarCode Solutions. Vi tilbyr pålitelig SEO for å sikre at din nettside er lett å finne.",
   keywords: "SEO, vedlikehold, support-tjenester, PolarCode Solutions, nettsider, programvare, optimal ytelse, Search engine optimization",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     title: "SEO og vedlikehold | PolarCode Solutions",
     description: "Oppdag våre Seo-tjenester hos PolarCode Solutions. Vi tilbyr pålitelig SEO for å sikre at din nettside er lett å finne.",
-    url: "https://www.polarcode.solutions/tjenester/seo",
+    url: "https://polarcode.solutions/tjenester/seo",
     images: [
       {
-        url: "https://www.polarcode.solutions/images/tjenester/seo.webp",
+        url: "https://polarcode.solutions/images/tjenester/seo.webp",
         width: 800,
         height: 600,
         alt: "PolarCode Solutions maintenance services preview image"
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 const BlogDetailsPage: React.FC = () => {
-  const shareUrl = "https://www.polarcode.solutions/tjenester/seo";
+  const shareUrl = "https://polarcode.solutions/tjenester/seo";
   const title = "SEO og vedlikehold | PolarCode Solutions";
   
   const jsonLd = {
@@ -42,16 +42,16 @@ const BlogDetailsPage: React.FC = () => {
     "@type": "BlogPosting",
     "headline": title,
     "description": "Oppdag våre Seo-tjenester hos PolarCode Solutions. Vi tilbyr pålitelig SEO for å sikre at din nettside er lett å finne.",
-    "image": "https://www.polarcode.solutions/images/logo/croppedPolarLogo.png",
+    "image": "https://polarcode.solutions/images/logo/croppedPolarLogo.png",
     "author": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://www.polarcode.solutions/logo.png"
+      "logo": "https://polarcode.solutions/logo.png"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PolarCode Solutions",
-      "logo": "https://www.polarcode.solutions/logo.png"
+      "logo": "https://polarcode.solutions/logo.png"
     },
     "url": shareUrl,
     "mainEntityOfPage": {
@@ -67,7 +67,7 @@ const BlogDetailsPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://www.polarcode.solutions/images/logo/croppedPolarLogo.png" />
+        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Seo og support-tjenester | PolarCode Solutions" />
@@ -75,7 +75,7 @@ const BlogDetailsPage: React.FC = () => {
           property="og:description"
           content="Oppdag våre Seo-tjenester hos PolarCode Solutions. Vi tilbyr pålitelig SEO for å sikre at din nettside er lett å finne."
         />
-        <meta property="og:url" content="https://www.polarcode.solutions/tjenester/seo" />
+        <meta property="og:url" content="https://polarcode.solutions/tjenester/seo" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
         <meta property="og:image:width" content="800" />
