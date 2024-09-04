@@ -108,7 +108,7 @@ const BlogDetailsPage: React.FC = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  SEO Tjenester
+                  Search Engine Optimization Tjenester
                 </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
@@ -127,7 +127,7 @@ const BlogDetailsPage: React.FC = () => {
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
-                          Av <span>PolarCode Solutions</span>
+                          Av <span>Morten Sandstedt</span>
                         </span>
                       </div>
                     </div>
@@ -193,7 +193,7 @@ const BlogDetailsPage: React.FC = () => {
                             Hvorfor er SEO viktig for en bedrift?
                         </h3>
                         <div>
-                            <a href="https://freetools.seobility.net/en/seocheck/polarcode.solutions"><img src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions" alt="Seobility Score für polarcode.solutions" /></a>
+                            <a href="https://freetools.seobility.net/en/seocheck/polarcode.solutions"><img style={{ height: '150px', width: '150px' }} src="https://freetools.seobility.net/widget/widget.png?url=polarcode.solutions"  alt="Seobility score for polarcode.solutions" /></a>
                         </div>
                         <br></br>
                         <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
