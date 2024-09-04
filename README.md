@@ -30,6 +30,8 @@ cd polarcode-solutions
 ```sh
 npm install
 npm install react-share
+npm install react-slick slick-carousel
+npm install swiper
 npm i sharp
 npm fund
 ```
