@@ -73,9 +73,9 @@ const blogData: Blog[] = [
     paragraph:"Vår SEO vil garantert øke søkemotorresultatene og omsetningen din.",
     image: "/images/tjenester/seo.webp",
     author: {
-      name: "PolarCode Solutions",
+      name: "Morten Sandstedt",
       image: "/images/blog/morten.png",
-      designation: "seo",
+      designation: "Search Engine Optimization",
     },
     tags: ["Search Engine Optimization"],
     publishDate: "2024",
