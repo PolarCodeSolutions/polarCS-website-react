@@ -116,7 +116,7 @@ const BlogDetailsPage: React.FC = () => {
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                         <img
-                          src="/images/logo/croppedPolarLogo.png"
+                          src="/images/blog/morten.png"
                           alt="author"
                           width={70}
                           height={70}
