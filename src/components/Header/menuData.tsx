@@ -14,16 +14,23 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 33,
+    id: 3,
     title: "Tjenester",
     path: "/tjenester",
     newTab: false,
   },
   {
-    id: 3,
+    id: 4,
+    title: "Våre design",
+    path: "/eksempler",
+    newTab: false,
+  },
+  {
+    id: 5,
     title: "Tilbud",
     path: "/kontakt",
     newTab: false,
   },
+
 ];
 export default menuData;
