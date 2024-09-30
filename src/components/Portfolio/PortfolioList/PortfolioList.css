@@ -1,0 +1,92 @@
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 33px;
+    /* Add some gap between text box and slideshow */
+}
+
+.service-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-content {
+    width: 50%;
+    padding: 30px;
+    background-color: #1f2937;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 20px 15px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    /* Center the content */
+}
+
+.service-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* Center the title */
+}
+
+.service-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.service-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.service-content a:hover {
+    background-color: #0056b3;
+}
+
+.service-image {
+    width: 50%;
+}
+
+.service-slide {
+    box-shadow: 0px 15px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 15px 16px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Sentrer bildene */
+    display: block;
+}
+
+/* Logo Styling */
+.service-logo {
+    width: 120px; /* Juster bredden etter behov */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Sentraliser logoen og legg til margin under */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        gap: 10px;
+        /* Smaller gap for mobile */
+    }
+    .service-content,
+    .service-image {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
