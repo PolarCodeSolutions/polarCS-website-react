@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: "webdesign, apputvikling, PolarCode Solutions",
   openGraph: {
     type: "website",
-    title: "Design eksempler | PolarCode Solutions",
+    title: "Vår portefølje | PolarCode Solutions",
     description: "Vi tilbyr innovative løsninger innen webutvikling, design og programvareutvikling.",
     url: "https://polarcode.solutions/portfolio",
     images: [
