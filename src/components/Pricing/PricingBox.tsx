@@ -1,29 +1,24 @@
 const PricingBox = (props: {
   price: string;
-  duration: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { price, packageName, subtitle, children } = props;
 
   return (
     <div className="w-full">
-      <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
-        <div className="flex items-center justify-between">
-          <p className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            Kr <span className="amount">{price}</span>
-            <span className="time text-lg font-medium text-body-color">
-              /{duration}
-            </span>
-          </p>
+      <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark transition-all duration-300">
+        <div className="flex flex-col items-center">
           <p className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </p>
+          <p className="price mb-4 text-[40px] font-bold text-black dark:text-white">
+            Fra kr <span className="amount">{price}</span>
+          </p>
         </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-        </div>
+        <p className="mb-7 text-base text-body-color text-center">{subtitle}</p>
+        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10"></div>
         <div>{children}</div>
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg
