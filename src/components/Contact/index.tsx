@@ -1,38 +1,27 @@
 "use client";
+import React, { Suspense, useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import NewsLatterBox from './NewsLatterBox';
 import {
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon
 } from 'react-share';
 
-import React, { useState, useEffect } from 'react';
-import NewsLatterBox from './NewsLatterBox';
-import { useSearchParams } from 'next/navigation'; // For å hente parametere fra URL-en
-
-const Contact: React.FC = () => {
+const ContactContent: React.FC = () => {
   const [result, setResult] = useState<string>('');
-  const [preFilledMessage, setPreFilledMessage] = useState<string>(''); // For utfylt melding
-  const [isClient, setIsClient] = useState(false); // For å sjekke om vi er på klienten
-  const searchParams = useSearchParams(); // Henter parametere fra URL-en
-
-  // Definer shareUrl på riktig sted
-  const shareUrl = "https://polarcode.solutions/kontakt";
-  const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
+  const [preFilledMessage, setPreFilledMessage] = useState<string>(''); 
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    setIsClient(true); // Sørger for at koden kjører på klienten
-
-    if (isClient) {
-      // Hent informasjon fra URL-parametrene og opprett en forhåndsutfylt melding
-      const summary = searchParams.get('summary');
-      const total = searchParams.get('total');
-      if (summary && total) {
-        setPreFilledMessage(
-          `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: Kr ${total}\n\nDetaljer:\n${summary}`
-        );
-      }
+    const summary = searchParams.get('summary');
+    const total = searchParams.get('total');
+    if (summary && total) {
+      setPreFilledMessage(
+        `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: Kr ${total}\n\nDetaljer:\n${summary}`
+      );
     }
-  }, [isClient, searchParams]);
+  }, [searchParams]);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,6 +47,9 @@ const Contact: React.FC = () => {
       setResult(data.message);
     }
   };
+
+  const shareUrl = "https://polarcode.solutions/kontakt";
+  const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
 
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -124,7 +116,7 @@ const Contact: React.FC = () => {
                         placeholder="Skriv inn din melding"
                         required
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                        value={preFilledMessage} // Forhåndsutfylt melding
+                        value={preFilledMessage}
                       ></textarea>
                     </div>
                   </div>
@@ -158,6 +150,14 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Contact: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactContent />
+    </Suspense>
   );
 };
 
