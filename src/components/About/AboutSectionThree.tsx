@@ -10,29 +10,30 @@ interface FacebookPost {
 }
 
 const AboutSectionThree: React.FC = () => {
-  const [posts, setPosts] = useState<FacebookPost[]>([]);
+  const [posts, setPosts] = useState<FacebookPost[] | undefined>(undefined); // Starter som undefined for å håndtere tilstanden før API-responsen
 
   useEffect(() => {
     const fetchPosts = async () => {
       const pageId = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID;
       const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
-      console.log("Test:", pageId);
 
       try {
-        // Spesifiser feltene som skal hentes i API-kallet
         const response = await fetch(
           `https://graph.facebook.com/v12.0/${pageId}/posts?fields=message,created_time,full_picture,permalink_url&access_token=${accessToken}&limit=3`
         );
         const data = await response.json();
-        
+
         // Logg API-responsen for å bekrefte at vi mottar riktig data
         console.log("API Response:", data);
-        
-        if (data) {
+
+        if (data && data.data) {
           setPosts(data.data); // Setter innleggene hvis data finnes
+        } else {
+          setPosts([]); // Setter tom liste hvis ingen data er tilgjengelig
         }
       } catch (error) {
         console.error("Error fetching Facebook posts:", error);
+        setPosts([]); // Setter tom liste ved feil
       }
     };
 
@@ -47,13 +48,16 @@ const AboutSectionThree: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.length > 0 ? (
+          {posts === undefined ? (
+            <p className="text-gray-600 dark:text-gray-400 text-center col-span-3">
+              Laster inn innlegg...
+            </p>
+          ) : posts.length > 0 ? (
             posts.map((post) => (
               <div
                 key={post.id}
                 className="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden transition-colors duration-300"
               >
-                {/* Sjekk om full_picture er tilgjengelig og vis bildet */}
                 {post.full_picture ? (
                   <img
                     src={post.full_picture}
@@ -82,14 +86,14 @@ const AboutSectionThree: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-yellow-400 hover:text-blue-800 dark:hover:text-yellow-500 text-sm font-semibold"
                   >
-                    Les mer på Facebook →
+                    Se innlegg på Facebook →
                   </a>
                 </div>
               </div>
             ))
           ) : (
             <p className="text-gray-600 dark:text-gray-400 text-center col-span-3">
-              Laster inn innlegg...
+              Ingen innlegg tilgjengelig.
             </p>
           )}
         </div>
