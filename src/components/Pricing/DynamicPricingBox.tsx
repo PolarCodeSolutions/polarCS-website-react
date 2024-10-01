@@ -28,7 +28,7 @@ const DynamicPricingBox = ({
     setSelectedOptions(updatedOptions);
 
     const updatedSummary = [...summary];
-    updatedSummary[currentStep] = `${services[currentStep].question}: ${text} (Kr ${price})`;
+    updatedSummary[currentStep] = `${services[currentStep]?.question}: ${text} (Kr ${price})`;
     setSummary(updatedSummary);
 
     setTimeout(() => handleNextStep(), 500);
@@ -82,30 +82,32 @@ const DynamicPricingBox = ({
           {subtitle}
         </p>
 
-        {/* Spørsmål og valgmuligheter */}
-        <div className="mb-10">
-          <h3 className="text-2xl font-semibold text-center text-dark dark:text-white mb-4">
-            {services[currentStep].question}
-          </h3>
-          <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
-            {services[currentStep].explanation}
-          </p>
-          <div className="flex flex-col items-center space-y-4">
-            {services[currentStep].options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleOptionChange(option.price, option.text)}
-                className={`w-3/4 px-6 py-3 text-lg rounded-lg border-2 font-medium transition ${
-                  selectedOptions[currentStep] === option.price
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'bg-white text-dark dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'
-                }`}
-              >
-                {option.text} (Kr {option.price})
-              </button>
-            ))}
+        {/* Sjekker om services har data og om currentStep er gyldig */}
+        {services.length > 0 && currentStep < services.length && (
+          <div className="mb-10">
+            <h3 className="text-2xl font-semibold text-center text-dark dark:text-white mb-4">
+              {services[currentStep]?.question}
+            </h3>
+            <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
+              {services[currentStep]?.explanation}
+            </p>
+            <div className="flex flex-col items-center space-y-4">
+              {services[currentStep].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleOptionChange(option.price, option.text)}
+                  className={`w-3/4 px-6 py-3 text-lg rounded-lg border-2 font-medium transition ${
+                    selectedOptions[currentStep] === option.price
+                      ? 'bg-blue-600 text-white border-blue-600'
+                      : 'bg-white text-dark dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  {option.text} (Kr {option.price})
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Navigasjon */}
         <div className="flex justify-between mt-8">
