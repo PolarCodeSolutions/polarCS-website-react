@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://polarcode.solutions/"),
-  title: "Design eksempler | PolarCode Solutions",
+  title: "Vår portfolio | PolarCode Solutions",
   description: "Se gjennom våre eksempelsider innen webdesign og apputvikling. Vi tilbyr løsninger skreddersydd til din bedrifts behov.",
   keywords: "webdesign, apputvikling, PolarCode Solutions",
   openGraph: {
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
         url: "https://polarcode.solutions/images/portfolio/portfolio_preview.webp",
         width: 800,
         height: 600,
-        alt: "PolarCode Solutions eksempler"
+        alt: "PolarCode Solutions portfolio"
       }
     ]
   },
   alternates: {
-    canonical: "https://polarcode.solutions/eksempler",
+    canonical: "https://polarcode.solutions/portfolio",
   }
 };
 
@@ -50,9 +50,9 @@ const ServicesPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="icon" href="/images/favicon.png" />
-        <meta property="og:title" content="Design eksempler | PolarCode Solutions" />
+        <meta property="og:title" content="portfolio | PolarCode Solutions" />
         <meta property="og:description" content="Utforsk hvordan vi kan hjelpe din bedrift med webutvikling og digitale løsninger." />
-        <meta property="og:url" content="https://polarcode.solutions/eksempler" />
+        <meta property="og:url" content="https://polarcode.solutions/portfolio" />
         <meta property="og:image" content="https://polarcode.solutions/images/portfolio/portfolio_preview.webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />

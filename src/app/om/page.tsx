@@ -1,6 +1,7 @@
 "use strict";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import AboutSectionThree from "@/components/About/AboutSectionThree";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 import Head from 'next/head';
@@ -98,6 +99,8 @@ const AboutPage: React.FC = () => {
       />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <AboutSectionThree />
+      
     </>
   );
 };
