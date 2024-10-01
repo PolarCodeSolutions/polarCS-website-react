@@ -12,20 +12,27 @@ import { useSearchParams } from 'next/navigation'; // For å hente parametere fr
 const Contact: React.FC = () => {
   const [result, setResult] = useState<string>('');
   const [preFilledMessage, setPreFilledMessage] = useState<string>(''); // For utfylt melding
-  const shareUrl = "https://polarcode.solutions/kontakt";
-  const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
+  const [isClient, setIsClient] = useState(false); // For å sjekke om vi er på klienten
   const searchParams = useSearchParams(); // Henter parametere fra URL-en
 
+  // Definer shareUrl på riktig sted
+  const shareUrl = "https://polarcode.solutions/kontakt";
+  const title = "Kontakt Oss for tilbud og info | PolarCode Solutions";
+
   useEffect(() => {
-    // Hent informasjon fra URL-parametrene og opprett en forhåndsutfylt melding
-    const summary = searchParams.get('summary');
-    const total = searchParams.get('total');
-    if (summary && total) {
-      setPreFilledMessage(
-        `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: Kr ${total}\n\nDetaljer:\n${summary}`
-      );
+    setIsClient(true); // Sørger for at koden kjører på klienten
+
+    if (isClient) {
+      // Hent informasjon fra URL-parametrene og opprett en forhåndsutfylt melding
+      const summary = searchParams.get('summary');
+      const total = searchParams.get('total');
+      if (summary && total) {
+        setPreFilledMessage(
+          `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: Kr ${total}\n\nDetaljer:\n${summary}`
+        );
+      }
     }
-  }, [searchParams]);
+  }, [isClient, searchParams]);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -117,7 +124,7 @@ const Contact: React.FC = () => {
                         placeholder="Skriv inn din melding"
                         required
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                        defaultValue={preFilledMessage} // Forhåndsutfylt melding
+                        value={preFilledMessage} // Forhåndsutfylt melding
                       ></textarea>
                     </div>
                   </div>
