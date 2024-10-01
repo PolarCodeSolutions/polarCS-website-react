@@ -16,6 +16,7 @@ const AboutSectionThree: React.FC = () => {
     const fetchPosts = async () => {
       const pageId = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID;
       const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
+      console.log("Test:", pageId);
 
       try {
         // Spesifiser feltene som skal hentes i API-kallet
