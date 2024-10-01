@@ -79,6 +79,7 @@ const Home: React.FC = () => {
         <meta property="og:image:height" content="600" />
         <meta property="og:image:alt" content="PolarCode Solutions logo" />
         <meta property="fb:app_id" content="1345767586400332" />
+
       </Head>
       <div itemScope itemType="https://schema.org/WebPage">
         <script
