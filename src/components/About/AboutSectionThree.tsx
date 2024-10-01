@@ -14,12 +14,17 @@ const AboutSectionThree: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      const pageId = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID;
+      const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
+
       try {
-        // Gjør kall til Cloudflare Function, som håndterer Facebook API-kallet
-        const response = await fetch('/fb-posts');
+        // Gjør kall til Facebook Graph API ved hjelp av miljøvariabler
+        const response = await fetch(
+          `https://graph.facebook.com/v12.0/${pageId}/posts?access_token=${accessToken}&limit=3`
+        );
         const data = await response.json();
         if (data) {
-          setPosts(data);
+          setPosts(data.data); // Setter innleggene hvis data finnes
         }
       } catch (error) {
         console.error("Error fetching Facebook posts:", error);
