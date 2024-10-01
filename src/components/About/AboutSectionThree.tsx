@@ -18,11 +18,15 @@ const AboutSectionThree: React.FC = () => {
       const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
 
       try {
-        // Gjør kall til Facebook Graph API ved hjelp av miljøvariabler
+        // Spesifiser feltene som skal hentes i API-kallet
         const response = await fetch(
-          `https://graph.facebook.com/v12.0/${pageId}/posts?access_token=${accessToken}&limit=3`
+          `https://graph.facebook.com/v12.0/${pageId}/posts?fields=message,created_time,full_picture,permalink_url&access_token=${accessToken}&limit=3`
         );
         const data = await response.json();
+        
+        // Logg API-responsen for å bekrefte at vi mottar riktig data
+        console.log("API Response:", data);
+        
         if (data) {
           setPosts(data.data); // Setter innleggene hvis data finnes
         }
@@ -48,12 +52,17 @@ const AboutSectionThree: React.FC = () => {
                 key={post.id}
                 className="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden transition-colors duration-300"
               >
-                {post.full_picture && (
+                {/* Sjekk om full_picture er tilgjengelig og vis bildet */}
+                {post.full_picture ? (
                   <img
                     src={post.full_picture}
                     alt="Post Image"
                     className="w-full h-48 object-cover"
                   />
+                ) : (
+                  <div className="w-full h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">Ingen bilde</span>
+                  </div>
                 )}
                 <div className="p-6">
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
