@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords: "nettside helgeland, webdesign helgeland, webdesign nordland, hjemmeside, webdesign, programvareutvikling, webutvikling, vedlikehold, PolarCode Solutions, polarcode, software, software solutions, nettside bedrift, nettside, mo i rana, helgeland, nordland",
   openGraph: {
     type: "website",
-    title: "Webdesign hos Programvare hos PolarCode Solutions",
+    title: "Webdesign og Programvare hos PolarCode Solutions",
     description: "PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt.",
     url: "https://polarcode.solutions/",
     images: [
