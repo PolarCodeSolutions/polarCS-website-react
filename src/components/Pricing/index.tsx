@@ -12,22 +12,22 @@ type Service = {
 };
 
 const Pricing = () => {
-  // Tjenester for spørsmål i DynamicPricingBox, med forklaringer
+  // Oppdaterte priser for spørsmål i DynamicPricingBox, med forklaringer
   const questionServices: Service[] = [
     {
       question: "Hva slags type nettside trenger du?",
       explanation: "Velg hva slags nettside du trenger. En enkel nettside har én side, en flersidig nettside har flere undersider, mens en kompleks webapplikasjon tilbyr avanserte funksjoner som krever backend-integrasjon.",
       options: [
-        { text: "Enkel nettside (1 side)", price: 3995 },
-        { text: "Flersidig nettside (3-10 sider)", price: 8449 },
-        { text: "Kompleks webapplikasjon", price: 14499 }
+        { text: "Enkel nettside (1 side)", price: 6590 },
+        { text: "Flersidig nettside (3-10 sider)", price: 9649 },
+        { text: "Kompleks webapplikasjon", price: 49500 }
       ]
     },
     {
       question: "Trenger du responsivt design?",
       explanation: "Responsivt design gjør at nettsiden fungerer godt på alle enheter, inkludert mobiltelefoner og nettbrett. Hvis du bare trenger en desktop-versjon, kan du velge bort dette.",
       options: [
-        { text: "Ja, mobil og nettbrettoptimalisert", price: 1200 },
+        { text: "Ja, mobil og nettbrettoptimalisert", price: 2199 },
         { text: "Nei, kun desktop", price: 0 }
       ]
     },
@@ -35,7 +35,7 @@ const Pricing = () => {
       question: "Vil du ha SEO-optimalisering?",
       explanation: "SEO (søkemotoroptimalisering) hjelper nettsiden din med å bli funnet i søkemotorer som Google, ved å forbedre synligheten din på nettet.",
       options: [
-        { text: "Ja", price: 1800 },
+        { text: "Ja", price: 3995 },
         { text: "Nei", price: 0 }
       ]
     },
@@ -43,7 +43,7 @@ const Pricing = () => {
       question: "Skal nettsiden ha sosiale medier-integrering?",
       explanation: "Integrering med sosiale medier gjør det enkelt for brukerne dine å dele og interagere med innhold fra nettsiden direkte på sosiale plattformer.",
       options: [
-        { text: "Ja, med full integrasjon", price: 1200 },
+        { text: "Ja, med full integrasjon", price: 3299 },
         { text: "Nei", price: 0 }
       ]
     },
@@ -51,13 +51,13 @@ const Pricing = () => {
       question: "Trenger du skreddersydd design og brukeropplevelse (UI/UX)?",
       explanation: "Skreddersydd design og brukeropplevelse gir deg en unik og personlig tilpasset nettside, designet spesielt for din merkevare og målgruppe.",
       options: [
-        { text: "Ja, med tilpasset design", price: 2500 },
+        { text: "Ja, med tilpasset design", price: 4999 },
         { text: "Nei, en enkel mal", price: 0 }
       ]
     },
     {
-      question: "Vil du ha vedlikehold og support etter lansering?",
-      explanation: "Vedlikehold og support sørger for at nettsiden din holdes oppdatert, sikker, og får hjelp ved eventuelle problemer i opptil 12 måneder etter lansering.",
+      question: "Vil du ha hosting, vedlikehold og support etter lansering?",
+      explanation: "Hosting med vedlikehold og support sørger for at nettsiden din holdes oppdatert, sikker, og får hjelp ved eventuelle problemer i opptil 12 måneder etter lansering.",
       options: [
         { text: "Ja, med 12 måneders support", price: 2200 },
         { text: "Nei, bare utvikling", price: 0 }
@@ -67,10 +67,10 @@ const Pricing = () => {
       question: "Trenger du spesifikke funksjoner på nettsiden?",
       explanation: "Noen nettsider krever spesialfunksjoner som e-handelsløsninger, bookingsystemer, blogger, eller brukerautentisering. Velg det du trenger her.",
       options: [
-        { text: "E-handel", price: 10000 },
-        { text: "Kalender- og bookingsystem", price: 8000 },
-        { text: "Blogg", price: 3000 },
-        { text: "Brukerautentisering", price: 6000 },
+        { text: "E-handel", price: 22399 },
+        { text: "Kalender- og bookingsystem", price: 15499 },
+        { text: "Blogg", price: 14499 },
+        { text: "Brukerautentisering", price: 9449 },
         { text: "Nei", price: 0 }
       ]
     },
@@ -90,15 +90,16 @@ const Pricing = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Nettsted (Enkeltside)"
-            price="3995"
+            price="6590"
             subtitle="En enkel nettside (1 side), perfekt for små prosjekter."
           >
             <OfferList text="Grunnleggende utvikling av 1 side" status="active" />
+            <OfferList text="+ 3 undersider" status="active" />
           </PricingBox>
 
           <PricingBox
             packageName="Flersidig nettside"
-            price="8449"
+            price="9649"
             subtitle="Perfekt for bedrifter med behov for flere sider."
           >
             <OfferList text="Flersidig nettsideutvikling (3-10 sider)" status="active" />
@@ -106,7 +107,7 @@ const Pricing = () => {
 
           <PricingBox
             packageName="Kompleks webapplikasjon"
-            price="14499"
+            price="49500"
             subtitle="En komplett webapplikasjon med backend og avansert funksjonalitet."
           >
             <OfferList text="Utvikling av fullverdig webapplikasjon" status="active" />
