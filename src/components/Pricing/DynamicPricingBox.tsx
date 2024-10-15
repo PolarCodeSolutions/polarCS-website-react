@@ -19,24 +19,24 @@ const DynamicPricingBox = ({
   services: Service[];
 }) => {
   const [currentStep, setCurrentStep] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<{ [key: number]: { price: number, text: string } }>({});
   const [summary, setSummary] = useState<string[]>([]);
 
-  const handleOptionChange = (price: number, text: string) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[currentStep] = price;
+  const handleOptionChange = (questionIndex: number, price: number, text: string) => {
+    const updatedOptions = { ...selectedOptions, [questionIndex]: { price, text } };
     setSelectedOptions(updatedOptions);
 
     const updatedSummary = [...summary];
-    updatedSummary[currentStep] = `${services[currentStep]?.question}: ${text} (Kr ${price})`;
+    updatedSummary[questionIndex] = `${services[questionIndex]?.question}: ${text} (Kr ${price})`;
     setSummary(updatedSummary);
 
+    // Automatiserer overgang til neste steg etter at et alternativ er valgt
     setTimeout(() => handleNextStep(), 500);
   };
 
   const calculateTotalPrice = () => {
-    const totalSelectedPrices = selectedOptions.reduce(
-      (total, price) => total + (price || 0),
+    const totalSelectedPrices = Object.values(selectedOptions).reduce(
+      (total, option) => total + (option?.price || 0),
       0
     );
     return Math.round(basePrice + totalSelectedPrices);
@@ -55,7 +55,7 @@ const DynamicPricingBox = ({
   };
 
   const resetSurvey = () => {
-    setSelectedOptions([]);
+    setSelectedOptions({});
     setSummary([]);
     setCurrentStep(0);
   };
@@ -95,9 +95,9 @@ const DynamicPricingBox = ({
               {services[currentStep].options.map((option, index) => (
                 <button
                   key={index}
-                  onClick={() => handleOptionChange(option.price, option.text)}
+                  onClick={() => handleOptionChange(currentStep, option.price, option.text)}
                   className={`w-3/4 px-6 py-3 text-lg rounded-lg border-2 font-medium transition ${
-                    selectedOptions[currentStep] === option.price
+                    selectedOptions[currentStep]?.price === option.price
                       ? 'bg-blue-600 text-white border-blue-600'
                       : 'bg-white text-dark dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'
                   }`}
