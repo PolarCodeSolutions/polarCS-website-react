@@ -75,7 +75,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contact
 
-For any questions or support, feel free to contact us:
+For any questions or support, feel free to contact:
 
 - **Phone:** +47 950 44 586
 - **Email:** [contact@polarcode.solutions](mailto:contact@polarcode.solutions)
