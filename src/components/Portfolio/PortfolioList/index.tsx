@@ -99,6 +99,34 @@ const ServiceList = () => {
       alignRight: false,
       logo: "/images/kunder/hydroplant/logo.png", // Add the logo URL here
     },
+    {
+      title: "T-Events – lyd, lys og stemning",
+      description:
+        "T-Events leverer profesjonell lyd, lys og underholdning for alle typer arrangementer. Vi laget en stemningsfull nettside som viser frem tjenestene og utstyrsutleien, og gjør det enkelt for kundene å ta kontakt.",
+      images: [
+        { src: "/images/kunder/t-event/0.png", width: 600, height: 400 },
+        { src: "/images/kunder/t-event/1.png", width: 600, height: 400 },
+        { src: "/images/kunder/t-event/2.png", width: 600, height: 400 },
+      ],
+      internalLink: "https://t-event.no",
+      externalLink: "https://t-event.no",
+      alignRight: true,
+      logo: "/images/kunder/t-event/logo.png",
+    },
+    {
+      title: "Polarsirkelen Dynamiske Sportsskyttere",
+      description:
+        "Sportsskytterklubben ved polarsirkelen fikk en moderne nettside med nyheter, bildegalleri, kurspåmelding og oversikt over bane- og treningstider – samlet på ett sted for medlemmer og nye skyttere.",
+      images: [
+        { src: "/images/kunder/pdss/0.png", width: 600, height: 400 },
+        { src: "/images/kunder/pdss/1.png", width: 600, height: 400 },
+        { src: "/images/kunder/pdss/2.png", width: 600, height: 400 },
+      ],
+      internalLink: "https://pdss.no",
+      externalLink: "https://pdss.no",
+      alignRight: false,
+      logo: "/images/kunder/pdss/logo.png",
+    },
   ];
 
   useEffect(() => {
