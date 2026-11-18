@@ -81,7 +81,7 @@ const ContactContent: React.FC = () => {
                         name="name"
                         placeholder="Skriv inn ditt navn"
                         required
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-white/10 dark:bg-white/[0.04] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -98,7 +98,7 @@ const ContactContent: React.FC = () => {
                         name="email"
                         placeholder="Skriv inn din e-post"
                         required
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-white/10 dark:bg-white/[0.04] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const ContactContent: React.FC = () => {
                         rows={5}
                         placeholder="Skriv inn din melding"
                         required
-                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-white/10 dark:bg-white/[0.04] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         value={preFilledMessage}
                         onChange={(e) => setPreFilledMessage(e.target.value)} // Legg til denne linjen
                       ></textarea>
@@ -125,7 +125,7 @@ const ContactContent: React.FC = () => {
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                      className="rounded-lg bg-aurora-gradient px-9 py-4 text-base font-semibold text-night-900 shadow-glow duration-300 hover:shadow-glow-soft"
                     >
                       Send melding
                     </button>
