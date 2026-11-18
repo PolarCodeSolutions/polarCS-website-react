@@ -98,7 +98,7 @@ const DynamicPricingBox = ({
                   onClick={() => handleOptionChange(currentStep, option.price, option.text)}
                   className={`w-3/4 px-6 py-3 text-lg rounded-lg border-2 font-medium transition ${
                     selectedOptions[currentStep]?.price === option.price
-                      ? 'bg-blue-600 text-white border-blue-600'
+                      ? 'bg-primary text-night-900 border-primary'
                       : 'bg-white text-dark dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -121,7 +121,7 @@ const DynamicPricingBox = ({
           <button
             onClick={handleNextStep}
             disabled={currentStep === services.length - 1}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50"
+            className="px-6 py-2 bg-primary text-night-900 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-50"
           >
             Neste
           </button>
