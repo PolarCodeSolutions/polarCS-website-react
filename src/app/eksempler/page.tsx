@@ -2,8 +2,6 @@
 import ServiceList from "@/components/Services/ServiceList";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
-import Head from 'next/head';
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://polarcode.solutions/"),
   title: "Design eksempler | PolarCode Solutions",
@@ -45,22 +43,6 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="/images/favicon.png" />
-        <meta property="og:title" content="Design eksempler | PolarCode Solutions" />
-        <meta property="og:description" content="Utforsk hvordan vi kan hjelpe din bedrift med webutvikling og digitale løsninger." />
-        <meta property="og:url" content="https://polarcode.solutions/eksempler" />
-        <meta property="og:image" content="https://polarcode.solutions/images/eksempler/preview.webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
       <Breadcrumb
         pageName="Ta en titt på våre eksempel sider"
         description="Bla gjennom og se om du finner noe som kan passe for din bedrift"

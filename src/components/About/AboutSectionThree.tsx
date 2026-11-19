@@ -10,92 +10,86 @@ interface FacebookPost {
 }
 
 const AboutSectionThree: React.FC = () => {
-  const [posts, setPosts] = useState<FacebookPost[] | undefined>(undefined); // Starter som undefined for å håndtere tilstanden før API-responsen
+  const [posts, setPosts] = useState<FacebookPost[] | undefined>(undefined);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const pageId = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID;
-      const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
+    const pageId = process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID;
+    const accessToken = process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN;
 
+    // Uten konfigurerte Facebook-nøkler henter vi ingenting (unngår 400 og feil)
+    if (!pageId || !accessToken) {
+      setPosts([]);
+      return;
+    }
+
+    const fetchPosts = async () => {
       try {
         const response = await fetch(
           `https://graph.facebook.com/v12.0/${pageId}/posts?fields=message,created_time,full_picture,permalink_url&access_token=${accessToken}&limit=3`
         );
         const data = await response.json();
-
-        // Logg API-responsen for å bekrefte at vi mottar riktig data
-        console.log("API Response:", data);
-
-        if (data && data.data) {
-          setPosts(data.data); // Setter innleggene hvis data finnes
-        } else {
-          setPosts([]); // Setter tom liste hvis ingen data er tilgjengelig
-        }
+        setPosts(Array.isArray(data?.data) ? data.data : []);
       } catch (error) {
-        console.error("Error fetching Facebook posts:", error);
-        setPosts([]); // Setter tom liste ved feil
+        setPosts([]);
       }
     };
 
     fetchPosts();
   }, []);
 
-  return (
-    <section className="py-16 md:py-20 lg:py-28 bg-gray-100 dark:bg-dark">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">
-          Fra Facebook
-        </h2>
+  // Skjul hele seksjonen når det ikke finnes innlegg (f.eks. uten Facebook-nøkler)
+  if (!posts || posts.length === 0) return null;
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts === undefined ? (
-            <p className="text-gray-600 dark:text-gray-400 text-center col-span-3">
-              Laster inn innlegg...
-            </p>
-          ) : posts.length > 0 ? (
-            posts.map((post) => (
-              <div
-                key={post.id}
-                className="bg-white dark:bg-dark rounded-lg shadow-lg overflow-hidden transition-colors duration-300"
-              >
-                {post.full_picture ? (
-                  <img
-                    src={post.full_picture}
-                    alt="Post Image"
-                    className="w-full h-48 object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Ingen bilde</span>
-                  </div>
-                )}
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                    {new Date(post.created_time).toLocaleDateString()}
-                  </p>
-                  {post.message && (
-                    <p className="text-gray-800 dark:text-gray-300 text-base leading-relaxed mb-4">
-                      {post.message.length > 100
-                        ? post.message.substring(0, 100) + "..."
-                        : post.message}
-                    </p>
-                  )}
-                  <a
-                    href={post.permalink_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-yellow-400 hover:text-blue-800 dark:hover:text-yellow-500 text-sm font-semibold"
-                  >
-                    Se innlegg på Facebook →
-                  </a>
+  return (
+    <section className="bg-white py-16 dark:bg-night-900 md:py-20 lg:py-28">
+      <div className="container">
+        <div className="mx-auto mb-12 max-w-[640px] text-center">
+          <span className="mb-4 inline-block h-1 w-14 rounded-full bg-aurora-gradient" />
+          <h2 className="text-3xl font-bold text-black dark:text-white sm:text-4xl">
+            Fra Facebook
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <div
+              key={post.id}
+              className="group overflow-hidden rounded-2xl border border-stroke-stroke bg-white transition duration-300 hover:-translate-y-1 hover:shadow-glow-soft dark:border-white/10 dark:bg-white/[0.03]"
+            >
+              {post.full_picture ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.full_picture}
+                  alt="Facebook-innlegg"
+                  className="h-48 w-full object-cover"
+                />
+              ) : (
+                <div className="flex h-48 w-full items-center justify-center bg-night-700">
+                  <span className="text-body-color-dark">Ingen bilde</span>
                 </div>
+              )}
+              <div className="p-6">
+                <p className="mb-2 text-sm text-body-color dark:text-body-color-dark">
+                  {new Date(post.created_time).toLocaleDateString("no-NO")}
+                </p>
+                {post.message && (
+                  <p className="mb-4 text-base leading-relaxed text-black dark:text-body-color-dark">
+                    {post.message.length > 120
+                      ? post.message.substring(0, 120) + "…"
+                      : post.message}
+                  </p>
+                )}
+                <a
+                  href={post.permalink_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-primary transition hover:text-primary/80"
+                >
+                  Se innlegg på Facebook →
+                </a>
               </div>
-            ))
-          ) : (
-            <p className="text-gray-600 dark:text-gray-400 text-center col-span-3">
-              Ingen innlegg tilgjengelig.
-            </p>
-          )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

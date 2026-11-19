@@ -3,7 +3,6 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import React from 'react';
 import { Metadata } from "next";
-import Head from 'next/head';
 import dynamic from "next/dynamic"; // Dynamisk import for Slider
 import SliderComponent from "@/components/Portfolio/SliderComponent"; // Import the client-side Slider component
 
@@ -81,46 +80,6 @@ const BlogDetailsPage: React.FC = () => {
 
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Hydroplant Dashboard Prosjekt | PolarCode Solutions" />
-        <meta
-          property="og:description"
-          content="Les om vårt prosjekt for Hydroplant Technologies AS, hvor vi utviklet et tilpasset dashboard med React, Node.js og en Django-backend."
-        />
-        <meta property="og:url" content="https://polarcode.solutions/portfolio/hydroplant-dashboard" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://polarcode.solutions/images/kunder/hydroplant/2.png" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
-        <meta property="og:image:alt" content="Hydroplant Dashboard utviklet av PolarCode Solutions" />
-        <meta property="fb:app_id" content="1345767586400332" />
-
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N1PJZ11X"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-76N1PJZ11X');
-            `,
-          }}
-        />
-      </Head>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">

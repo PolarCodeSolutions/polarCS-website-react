@@ -8,7 +8,6 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import { Metadata } from "next";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://polarcode.solutions/"),
@@ -59,28 +58,6 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="https://polarcode.solutions/images/favicon.png" />
-        <link rel="apple-touch-icon" href="https://polarcode.solutions/images/logo/croppedPolarLogo.png" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Webdesign og Programvareutvikling | PolarCode Solutions" />
-        <meta
-          property="og:description"
-          content="PolarCode Solutions tilbyr skreddersydd webdesign, programvareutvikling og vedlikehold. Kontakt oss for tilbud på ditt neste prosjekt."
-        />
-        <meta property="og:url" content="https://polarcode.solutions/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://polarcode.solutions/images/polarPreviewGen.webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
-        <meta property="og:image:alt" content="PolarCode Solutions logo" />
-        <meta property="fb:app_id" content="1345767586400332" />
-
-      </Head>
       <div itemScope itemType="https://schema.org/WebPage">
         <script
           type="application/ld+json"
