@@ -77,8 +77,8 @@ const VilkarPage = () => (
       </li>
       <li>
         Du er behandlingsansvarlig for personopplysninger om kundene, medlemmene og deltakerne dine. Vi behandler dem
-        som databehandler, se <A href="/personvern">personvernerklæringen</A>. Vi inngår databehandleravtale ved
-        behov.
+        som databehandler etter <A href="/databehandleravtale">databehandleravtalen</A>, som er en del av avtalen
+        mellom oss. Se også <A href="/personvern">personvernerklæringen</A>.
       </li>
       <li>
         Tjenestene kan ikke brukes til ulovlig innhold, svindel, spam eller til å angripe eller belaste systemene. Da
