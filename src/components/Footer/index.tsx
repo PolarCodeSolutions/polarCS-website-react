@@ -142,6 +142,22 @@ const Footer = () => {
                       Send inn skjema
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/personvern"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Personvern
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/vilkar"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Vilkår for bruk
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
