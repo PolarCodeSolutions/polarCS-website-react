@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { A, CompanyLine, H2, H3, LegalPage, P, Table, UL } from "@/components/Legal/LegalPage";
 import { COMPANY } from "@/lib/company";
+import { SUBPROCESSOR_ROWS } from "@/lib/subprocessors";
 
 export const metadata: Metadata = {
   title: "Personvernerklæring | PolarCode Solutions",
@@ -131,21 +132,7 @@ const PersonvernPage = () => (
       Opplysningene lagres på servere vi drifter selv i to datasentre i Norge, slik at tjenesten fortsetter å virke
       hvis det ene får problemer. Vi bruker disse underleverandørene:
     </P>
-    <Table
-      head={["Leverandør", "Hva de gjør", "Hvor"]}
-      rows={[
-        [
-          "Cloudflare",
-          "DNS, beskyttelse mot angrep og levering av nettsidene. Ser IP-adressen til besøkende.",
-          "Globalt (EU-standardkontrakter og EU–US Data Privacy Framework)",
-        ],
-        ["Web3Forms", "Videresender meldinger fra skjemaene på polarcode.solutions til vår e-post", "Utenfor EØS (EU-standardkontrakter)"],
-        ["Namecheap (Private Email)", "Sender e-post fra plattformen, for eksempel ordrebekreftelser og billetter", "USA / EU"],
-        ["Vipps MobilePay", "Betaling i nettbutikker og billettsalg", "Norge / EØS"],
-        ["Stripe", "Kortbetaling og Klarna i nettbutikker og billettsalg", "EØS / USA (Data Privacy Framework)"],
-        ["Fiken", "Regnskap – bare hvis kunden selv kobler til", "Norge"],
-      ]}
-    />
+    <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={SUBPROCESSOR_ROWS} />
     <P>
       Vi selger aldri personopplysninger og deler dem ikke med andre enn leverandørene over, med mindre vi er pålagt
       det ved lov.
