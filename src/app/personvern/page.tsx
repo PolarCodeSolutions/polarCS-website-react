@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { A, CompanyLine, H2, H3, LegalPage, P, Table, UL } from "@/components/Legal/LegalPage";
 import { COMPANY } from "@/lib/company";
-import { SUBPROCESSOR_ROWS } from "@/lib/subprocessors";
+import { CUSTOMER_VENDOR_ROWS, OWN_SITE_VENDOR_ROWS, SUBPROCESSOR_ROWS } from "@/lib/subprocessors";
 
 export const metadata: Metadata = {
   title: "Personvernerklæring | PolarCode Solutions",
@@ -133,6 +133,13 @@ const PersonvernPage = () => (
       hvis det ene får problemer. Vi bruker disse underleverandørene:
     </P>
     <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={SUBPROCESSOR_ROWS} />
+    <P>Bare for skjemaene her på polarcode.solutions:</P>
+    <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={OWN_SITE_VENDOR_ROWS} />
+    <P>
+      Kundene våre kan i tillegg koble til tjenester de selv har avtale med. Da går opplysningene direkte mellom
+      kunden og leverandøren:
+    </P>
+    <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={CUSTOMER_VENDOR_ROWS} />
     <P>
       Vi selger aldri personopplysninger og deler dem ikke med andre enn leverandørene over, med mindre vi er pålagt
       det ved lov.

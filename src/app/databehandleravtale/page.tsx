@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { A, CompanyLine, H2, LegalPage, P, Table, UL } from "@/components/Legal/LegalPage";
 import { COMPANY } from "@/lib/company";
-import { SUBPROCESSOR_ROWS } from "@/lib/subprocessors";
+import { CUSTOMER_VENDOR_ROWS, SUBPROCESSOR_ROWS } from "@/lib/subprocessors";
 
 export const metadata: Metadata = {
   title: "Databehandleravtale | PolarCode Solutions",
@@ -90,6 +90,11 @@ const DatabehandleravtalePage = () => (
       kunden si opp avtalen uten kostnad før endringen gjelder.
     </P>
     <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={SUBPROCESSOR_ROWS} />
+    <P>
+      Betalingsleverandører og regnskapssystem som kunden selv kobler til, er ikke databehandlerens underleverandører.
+      Kunden har egen avtale med dem, og databehandleren sender bare det som trengs for at koblingen skal virke:
+    </P>
+    <Table head={["Leverandør", "Hva de gjør", "Hvor"]} rows={CUSTOMER_VENDOR_ROWS} />
 
     <H2 id="tredjeland">8. Overføring utenfor EØS</H2>
     <P>
