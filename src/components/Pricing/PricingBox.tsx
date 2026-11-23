@@ -1,70 +1,53 @@
+import OfferList from "./OfferList";
+
 const PricingBox = (props: {
-  price: string;
   packageName: string;
-  subtitle: string;
-  children: React.ReactNode;
+  tagline: string;
+  price: React.ReactNode; // stort tall, f.eks. «249»
+  unit: string; // f.eks. «/mnd»
+  note: string; // linje under prisen, f.eks. «+ 1 990 kr i oppstart»
+  features: string[];
+  highlight?: boolean;
+  cta: string;
+  onSelect: () => void;
 }) => {
-  const { price, packageName, subtitle, children } = props;
+  const { packageName, tagline, price, unit, note, features, highlight, cta, onSelect } = props;
 
   return (
-    <div className="w-full">
-      <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark transition-all duration-300">
-        <div className="flex flex-col items-center">
-          <p className="mb-2 text-xl font-bold text-dark dark:text-white">
-            {packageName}
-          </p>
-          <p className="price mb-4 text-[40px] font-bold text-black dark:text-white">
-            Fra kr <span className="amount">{price}</span>
-          </p>
-        </div>
-        <p className="mb-7 text-base text-body-color text-center">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10"></div>
-        <div>{children}</div>
-        <div className="absolute bottom-0 right-0 z-[-1]">
-          <svg
-            width="179"
-            height="158"
-            viewBox="0 0 179 158"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.5"
-              d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-              fill="url(#paint0_linear_70:153)"
-            />
-            <path
-              opacity="0.3"
-              d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-              fill="url(#paint1_linear_70:153)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_70:153"
-                x1="69.6694"
-                y1="29.9033"
-                x2="196.108"
-                y2="83.2919"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_70:153"
-                x1="165.348"
-                y1="-75.4466"
-                x2="-3.75136"
-                y2="103.645"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+    <div
+      className={`relative flex h-full flex-col rounded-lg bg-white px-7 py-9 shadow-three transition-all duration-300 hover:shadow-one dark:bg-gray-dark dark:shadow-two ${
+        highlight ? "ring-2 ring-primary" : ""
+      }`}
+    >
+      {highlight && (
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-night-900">
+          Mest valgt
+        </span>
+      )}
+      <p className="mb-2 text-xl font-bold text-dark dark:text-white">{packageName}</p>
+      <p className="mb-6 min-h-[3rem] text-sm text-body-color">{tagline}</p>
+      <p className="text-dark dark:text-white">
+        <span className="text-[40px] font-bold leading-none">{price}</span>
+        <span className="ml-1 text-base font-medium text-body-color">{unit}</span>
+      </p>
+      <p className="mb-6 mt-2 text-sm text-body-color">{note}</p>
+      <div className="mb-6 border-b border-body-color border-opacity-10 dark:border-white dark:border-opacity-10" />
+      <div className="mb-8 flex-1">
+        {features.map((f) => (
+          <OfferList key={f} text={f} status="active" />
+        ))}
       </div>
+      <button
+        type="button"
+        onClick={onSelect}
+        className={`w-full rounded-lg px-6 py-3 text-base font-semibold transition ${
+          highlight
+            ? "bg-primary text-night-900 hover:bg-primary/90"
+            : "border-2 border-primary text-dark hover:bg-primary hover:text-night-900 dark:text-white"
+        }`}
+      >
+        {cta}
+      </button>
     </div>
   );
 };

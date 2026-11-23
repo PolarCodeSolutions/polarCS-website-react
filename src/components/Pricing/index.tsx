@@ -1,127 +1,70 @@
 "use client";
+import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import PricingBox from "./PricingBox";
 import DynamicPricingBox from "./DynamicPricingBox";
-import OfferList from "./OfferList";
-import React, { useState } from 'react';
-
-type Service = {
-  question: string;
-  explanation: string;  // Forklaring for spørsmålet
-  options: { text: string; price: number; disabled?: boolean }[];
-};
+import { CUSTOM, PACKAGES, formatKr } from "./prices";
 
 const Pricing = () => {
-  // Oppdaterte priser for spørsmål i DynamicPricingBox, med forklaringer
-  const questionServices: Service[] = [
-    {
-      question: "Hva slags type nettside trenger du?",
-      explanation: "Velg hva slags nettside du trenger. En enkel nettside har én side, en flersidig nettside har flere undersider, mens en kompleks webapplikasjon tilbyr avanserte funksjoner som krever backend-integrasjon.",
-      options: [
-        { text: "Enkel nettside (1 side)", price: 6590 },
-        { text: "Flersidig nettside (3-10 sider)", price: 9649 },
-        { text: "Kompleks webapplikasjon", price: 49500 }
-      ]
-    },
-    {
-      question: "Trenger du responsivt design?",
-      explanation: "Responsivt design gjør at nettsiden fungerer godt på alle enheter, inkludert mobiltelefoner og nettbrett. Hvis du bare trenger en desktop-versjon, kan du velge bort dette.",
-      options: [
-        { text: "Ja, mobil og nettbrettoptimalisert", price: 2199 },
-        { text: "Nei, kun desktop", price: 0 }
-      ]
-    },
-    {
-      question: "Vil du ha SEO-optimalisering?",
-      explanation: "SEO (søkemotoroptimalisering) hjelper nettsiden din med å bli funnet i søkemotorer som Google, ved å forbedre synligheten din på nettet.",
-      options: [
-        { text: "Ja", price: 3995 },
-        { text: "Nei", price: 0 }
-      ]
-    },
-    {
-      question: "Skal nettsiden ha sosiale medier-integrering?",
-      explanation: "Integrering med sosiale medier gjør det enkelt for brukerne dine å dele og interagere med innhold fra nettsiden direkte på sosiale plattformer.",
-      options: [
-        { text: "Ja, med full integrasjon", price: 3299 },
-        { text: "Nei", price: 0 }
-      ]
-    },
-    {
-      question: "Trenger du skreddersydd design og brukeropplevelse (UI/UX)?",
-      explanation: "Skreddersydd design og brukeropplevelse gir deg en unik og personlig tilpasset nettside, designet spesielt for din merkevare og målgruppe.",
-      options: [
-        { text: "Ja, med tilpasset design", price: 4999 },
-        { text: "Nei, en enkel mal", price: 0 }
-      ]
-    },
-    {
-      question: "Vil du ha hosting, vedlikehold og support etter lansering?",
-      explanation: "Hosting med vedlikehold og support sørger for at nettsiden din holdes oppdatert, sikker, og får hjelp ved eventuelle problemer i opptil 12 måneder etter lansering.",
-      options: [
-        { text: "Ja, med 12 måneders support", price: 2200 },
-        { text: "Nei, bare utvikling", price: 0 }
-      ]
-    },
-    {
-      question: "Trenger du spesifikke funksjoner på nettsiden?",
-      explanation: "Noen nettsider krever spesialfunksjoner som e-handelsløsninger, bookingsystemer, blogger, eller brukerautentisering. Velg det du trenger her.",
-      options: [
-        { text: "E-handel", price: 22399 },
-        { text: "Kalender- og bookingsystem", price: 15499 },
-        { text: "Blogg", price: 14499 },
-        { text: "Brukerautentisering", price: 9449 },
-        { text: "Nei", price: 0 }
-      ]
-    },
-  ];
+  const [packageId, setPackageId] = useState(PACKAGES.find((p) => p.highlight)?.id ?? PACKAGES[0].id);
+  const [addOns, setAddOns] = useState<string[]>([]);
+
+  const choose = (id: string) => {
+    setPackageId(id);
+    document.getElementById("priskalkulator")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Se hvor mye din nettside vil koste"
-          paragraph="Velg grunnpakken for din nettside, og tilpass med tilleggstjenester etter behov. Dette er et estimat, og en nøyaktig pris vil bli gitt når vi gjennomgår hele prosjektet."
+          title="Hva koster det?"
+          paragraph="Du får en ferdig nettside som du styrer selv i PolarCode-portalen. Lav oppstart og fast pris per måned, med drift, oppdateringer og hjelp når du trenger det."
           center
-          width="665px"
+          width="700px"
+          mb="70px"
         />
 
-        {/* Grunnpakker */}
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {PACKAGES.map((p) => (
+            <PricingBox
+              key={p.id}
+              packageName={p.name}
+              tagline={p.tagline}
+              price={formatKr(p.monthly)}
+              unit="kr/mnd"
+              note={`+ ${formatKr(p.setup)} kr i oppstart`}
+              features={p.features}
+              highlight={p.highlight}
+              cta="Regn ut pris"
+              onSelect={() => choose(p.id)}
+            />
+          ))}
           <PricingBox
-            packageName="Nettsted (Enkeltside)"
-            price="6590"
-            subtitle="En enkel nettside (1 side), perfekt for små prosjekter."
-          >
-            <OfferList text="Grunnleggende utvikling av 1 side" status="active" />
-            <OfferList text="+ 3 undersider" status="active" />
-          </PricingBox>
-
-          <PricingBox
-            packageName="Flersidig nettside"
-            price="9649"
-            subtitle="Perfekt for bedrifter med behov for flere sider."
-          >
-            <OfferList text="Flersidig nettsideutvikling (3-10 sider)" status="active" />
-          </PricingBox>
-
-          <PricingBox
-            packageName="Kompleks webapplikasjon"
-            price="49500"
-            subtitle="En komplett webapplikasjon med backend og avansert funksjonalitet."
-          >
-            <OfferList text="Utvikling av fullverdig webapplikasjon" status="active" />
-            <OfferList text="Backend og databaseintegrasjon" status="active" />
-          </PricingBox>
+            packageName={CUSTOM.name}
+            tagline={CUSTOM.tagline}
+            price={<span className="text-[32px]">Fra {formatKr(CUSTOM.from)}</span>}
+            unit="kr"
+            note="Drift og support etter avtale"
+            features={CUSTOM.features}
+            cta="Ta kontakt"
+            onSelect={() => {
+              window.location.href = `/kontakt?summary=${encodeURIComponent(
+                "Pakke: Skreddersydd",
+              )}&total=${encodeURIComponent(`fra ${formatKr(CUSTOM.from)} kr (inkl. mva)`)}`;
+            }}
+          />
         </div>
+        <p className="mt-6 text-center text-sm text-body-color">
+          Alle priser er inkludert 25 % mva. Domene kommer i tillegg til kostpris.
+        </p>
 
-        {/* Dynamic Pricing Box - Tilpasning av tilleggstjenester */}
-        <div className="mt-16">
+        <div id="priskalkulator" className="mt-16 scroll-mt-28">
           <DynamicPricingBox
-            basePrice={0}
-            packageName="Tilpasset utvikling"
-            subtitle="Legg til tjenester som passer dine behov."
-            services={questionServices} // Bruker questionServices for DynamicPricingBox
+            packageId={packageId}
+            onPackageChange={setPackageId}
+            addOns={addOns}
+            onAddOnsChange={setAddOns}
           />
         </div>
       </div>

@@ -1,149 +1,114 @@
 "use client";
-import React, { useState } from 'react';
+import { ADDONS, PACKAGES, formatKr } from "./prices";
 
-type Service = {
-  question: string;
-  explanation: string; // Forklaring for spørsmålet
-  options: { text: string; price: number; disabled?: boolean }[];
-};
-
+// Priskalkulator: velg pakke og tillegg, og se oppstart og månedspris (inkl. mva).
 const DynamicPricingBox = ({
-  basePrice,
-  packageName,
-  subtitle,
-  services
+  packageId,
+  onPackageChange,
+  addOns,
+  onAddOnsChange,
 }: {
-  basePrice: number;
-  packageName: string;
-  subtitle: string;
-  services: Service[];
+  packageId: string;
+  onPackageChange: (id: string) => void;
+  addOns: string[];
+  onAddOnsChange: (ids: string[]) => void;
 }) => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState<{ [key: number]: { price: number, text: string } }>({});
-  const [summary, setSummary] = useState<string[]>([]);
+  const pkg = PACKAGES.find((p) => p.id === packageId) ?? PACKAGES[0];
+  const available = ADDONS.filter((a) => !a.onlyFor?.length || a.onlyFor.includes(pkg.id));
+  const chosen = available.filter((a) => addOns.includes(a.id));
+  const setup = pkg.setup + chosen.reduce((s, a) => s + (a.setup ?? 0), 0);
+  const monthly = pkg.monthly + chosen.reduce((s, a) => s + (a.monthly ?? 0), 0);
 
-  const handleOptionChange = (questionIndex: number, price: number, text: string) => {
-    const updatedOptions = { ...selectedOptions, [questionIndex]: { price, text } };
-    setSelectedOptions(updatedOptions);
+  const toggle = (id: string) =>
+    onAddOnsChange(addOns.includes(id) ? addOns.filter((x) => x !== id) : [...addOns, id]);
 
-    const updatedSummary = [...summary];
-    updatedSummary[questionIndex] = `${services[questionIndex]?.question}: ${text} (Kr ${price})`;
-    setSummary(updatedSummary);
+  const addOnPrice = (a: (typeof ADDONS)[number]) =>
+    [a.setup ? `${formatKr(a.setup)} kr engangs` : "", a.monthly ? `${formatKr(a.monthly)} kr/mnd` : ""]
+      .filter(Boolean)
+      .join(" + ");
 
-    // Automatiserer overgang til neste steg etter at et alternativ er valgt
-    setTimeout(() => handleNextStep(), 500);
-  };
-
-  const calculateTotalPrice = () => {
-    const totalSelectedPrices = Object.values(selectedOptions).reduce(
-      (total, option) => total + (option?.price || 0),
-      0
-    );
-    return Math.round(basePrice + totalSelectedPrices);
-  };
-
-  const handleNextStep = () => {
-    if (currentStep < services.length - 1) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
-  const handlePreviousStep = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-
-  const resetSurvey = () => {
-    setSelectedOptions({});
-    setSummary([]);
-    setCurrentStep(0);
-  };
-
-  const handleContactRedirect = () => {
-    const contactUrl = `/kontakt?summary=${encodeURIComponent(
-      summary.join('\n')
-    )}&total=${calculateTotalPrice()}`;
-    window.location.href = contactUrl; // Bruker window.location til å omdirigere
+  const contactHref = () => {
+    const lines = [`Pakke: ${pkg.name} (${formatKr(pkg.setup)} kr oppstart + ${formatKr(pkg.monthly)} kr/mnd)`];
+    chosen.forEach((a) => lines.push(`Tillegg: ${a.name} (${addOnPrice(a)})`));
+    const total = `${formatKr(setup)} kr i oppstart + ${formatKr(monthly)} kr/mnd (inkl. mva)`;
+    return `/kontakt?summary=${encodeURIComponent(lines.join("\n"))}&total=${encodeURIComponent(total)}`;
   };
 
   return (
-    <div className="w-full">
-      <div className="relative z-10 rounded-lg bg-white dark:bg-gray-800 px-10 py-12 shadow-lg transition-all duration-300">
-        <div className="flex flex-col items-center">
-          <p className="mb-2 text-2xl font-bold text-dark dark:text-white">
-            {packageName}
-          </p>
-          <p className="price mb-6 text-[48px] font-extrabold text-black dark:text-white">
-            kr <span className="amount">{calculateTotalPrice()}</span>
-          </p>
-        </div>
-        <p className="mb-10 text-lg text-center text-gray-600 dark:text-gray-300">
-          {subtitle}
-        </p>
+    <div className="rounded-lg bg-white px-6 py-10 shadow-three dark:bg-gray-dark dark:shadow-two sm:px-10">
+      <h3 className="mb-2 text-center text-2xl font-bold text-dark dark:text-white">Regn ut din pris</h3>
+      <p className="mb-10 text-center text-body-color">Velg pakke og det du vil ha i tillegg.</p>
 
-        {/* Sjekker om services har data og om currentStep er gyldig */}
-        {services.length > 0 && currentStep < services.length && (
-          <div className="mb-10">
-            <h3 className="text-2xl font-semibold text-center text-dark dark:text-white mb-4">
-              {services[currentStep]?.question}
-            </h3>
-            <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
-              {services[currentStep]?.explanation}
-            </p>
-            <div className="flex flex-col items-center space-y-4">
-              {services[currentStep].options.map((option, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleOptionChange(currentStep, option.price, option.text)}
-                  className={`w-3/4 px-6 py-3 text-lg rounded-lg border-2 font-medium transition ${
-                    selectedOptions[currentStep]?.price === option.price
-                      ? 'bg-primary text-night-900 border-primary'
-                      : 'bg-white text-dark dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'
-                  }`}
-                >
-                  {option.text} (Kr {option.price})
-                </button>
-              ))}
-            </div>
+      <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
+        <div>
+          <p className="mb-3 font-semibold text-dark dark:text-white">1. Pakke</p>
+          <div className="mb-8 grid gap-3 sm:grid-cols-3">
+            {PACKAGES.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => onPackageChange(p.id)}
+                aria-pressed={p.id === pkg.id}
+                className={`rounded-lg border-2 px-4 py-3 text-left transition ${
+                  p.id === pkg.id
+                    ? "border-primary bg-primary/10"
+                    : "border-gray-200 hover:border-primary/60 dark:border-gray-600"
+                }`}
+              >
+                <span className="block font-semibold text-dark dark:text-white">{p.name}</span>
+                <span className="text-sm text-body-color">{formatKr(p.monthly)} kr/mnd</span>
+              </button>
+            ))}
           </div>
-        )}
 
-        {/* Navigasjon */}
-        <div className="flex justify-between mt-8">
-          <button
-            onClick={handlePreviousStep}
-            disabled={currentStep === 0}
-            className="px-6 py-2 bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-200 rounded-lg font-semibold hover:bg-gray-400 dark:hover:bg-gray-500 disabled:opacity-50"
-          >
-            Forrige
-          </button>
-          <button
-            onClick={handleNextStep}
-            disabled={currentStep === services.length - 1}
-            className="px-6 py-2 bg-primary text-night-900 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-50"
-          >
-            Neste
-          </button>
+          <p className="mb-3 font-semibold text-dark dark:text-white">2. Tillegg</p>
+          <div className="space-y-3">
+            {available.map((a) => (
+              <label
+                key={a.id}
+                className={`flex cursor-pointer items-start gap-3 rounded-lg border-2 px-4 py-3 transition ${
+                  addOns.includes(a.id) ? "border-primary bg-primary/10" : "border-gray-200 dark:border-gray-600"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  className="mt-1 h-4 w-4 accent-primary"
+                  checked={addOns.includes(a.id)}
+                  onChange={() => toggle(a.id)}
+                />
+                <span className="flex-1">
+                  <span className="flex flex-wrap justify-between gap-x-4">
+                    <span className="font-semibold text-dark dark:text-white">{a.name}</span>
+                    <span className="text-sm font-medium text-body-color">{addOnPrice(a)}</span>
+                  </span>
+                  <span className="block text-sm text-body-color">{a.description}</span>
+                </span>
+              </label>
+            ))}
+          </div>
         </div>
 
-        {/* Tilbakestill og Kontakt-knapper */}
-        {currentStep === services.length - 1 && (
-          <div className="flex flex-col items-center mt-8">
-            <button
-              onClick={resetSurvey}
-              className="mb-4 px-6 py-2 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600"
-            >
-              Tilbakestill undersøkelsen
-            </button>
-            <button
-              onClick={handleContactRedirect}
-              className="px-6 py-2 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600"
-            >
-              Kontakt oss
-            </button>
+        <div className="h-fit rounded-lg bg-gray-light p-6 dark:bg-black/30 lg:sticky lg:top-28">
+          <p className="mb-4 font-semibold text-dark dark:text-white">Din pris</p>
+          <div className="mb-2 flex items-baseline justify-between">
+            <span className="text-body-color">Per måned</span>
+            <span className="text-3xl font-bold text-dark dark:text-white">{formatKr(monthly)} kr</span>
           </div>
-        )}
+          <div className="mb-6 flex items-baseline justify-between">
+            <span className="text-body-color">Oppstart (engangs)</span>
+            <span className="text-xl font-semibold text-dark dark:text-white">{formatKr(setup)} kr</span>
+          </div>
+          <p className="mb-6 text-xs text-body-color">
+            Alle priser inkl. 25 % mva. Domene kommer i tillegg til kostpris. Endelig pris får du etter en
+            gratis gjennomgang.
+          </p>
+          <a
+            href={contactHref()}
+            className="block w-full rounded-lg bg-primary px-6 py-3 text-center font-semibold text-night-900 transition hover:bg-primary/90"
+          >
+            Send forespørsel
+          </a>
+        </div>
       </div>
     </div>
   );

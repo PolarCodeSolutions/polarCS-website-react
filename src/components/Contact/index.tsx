@@ -18,7 +18,7 @@ const ContactContent: React.FC = () => {
     const total = searchParams.get('total');
     if (summary && total) {
       setPreFilledMessage(
-        `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: Kr ${total}\n\nDetaljer:\n${summary}`
+        `Jeg ønsker å kontakte dere angående dette tilbudet:\n\nEstimert pris: ${total}\n\nDetaljer:\n${summary}`
       );
     }
   }, [searchParams]);
