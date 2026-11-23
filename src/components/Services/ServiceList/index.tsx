@@ -60,7 +60,7 @@ const ServiceList = () => {
     {
       title: "Moderne nettside for snekkerfirma",
       description:
-        "Denne nettsiden er skreddersydd for snekkertjenester, med et intuitivt design som gjør det enkelt for kundene å navigere. Mobiloptimalisering sikrer at siden fungerer sømløst på alle enheter.",
+        "Varm og tydelig nettside for håndverkere, med tjenester, prosjekter og kontaktskjema. Kunden legger selv inn nye prosjekter, bilder og tekster i PolarCode-portalen – nettsiden oppdateres med en gang.",
       images: [
         {
           src: "/images/eksempler/snekker/snekker_front_1.png",
@@ -89,7 +89,7 @@ const ServiceList = () => {
     {
       title: "Brukervennlig nettside for elektrikertjenester",
       description:
-        "Nettsiden for elektrikere har enkel navigasjon og et responsivt design. Den gir kundene muligheten til å raskt finne informasjon og bestille tjenester direkte fra siden.",
+        "Moderne nettside med fokus på tjenester, døgnvakt og rask kontakt. Samme fleksible løsning som snekkeren, men med et helt eget uttrykk – alt innhold redigeres i PolarCode-portalen.",
       images: [
         {
           src: "/images/eksempler/elektriker/elektriker_front_1.png",
@@ -108,6 +108,32 @@ const ServiceList = () => {
         },
       ],
       link: "https://elektriker.polarcode.solutions/",
+      alignRight: true,
+    },
+    {
+      title: "Nettside for lag og foreninger",
+      description:
+        "Arrangementer med påmelding og billetter, nyheter, sponsorer etter nivå og nyhetsbrev. Påmeldingsskjemaene lages i portalen, og påmeldingene havner rett i oversikten til styret.",
+      images: [
+        { src: "/images/eksempler/forening/forening_front_1.png", width: 600, height: 400 },
+        { src: "/images/eksempler/forening/forening_front_2.png", width: 600, height: 400 },
+        { src: "/images/eksempler/forening/forening_front_3.png", width: 600, height: 400 },
+        { src: "/images/eksempler/forening/forening_front_4.png", width: 600, height: 400 },
+      ],
+      link: "https://forening.polarcode.solutions/",
+      alignRight: false,
+    },
+    {
+      title: "Nettbutikk med Vipps og kortbetaling",
+      description:
+        "Komplett nettbutikk med produktvarianter, handlekurv og kasse med Vipps, kort og Klarna. Produkter, priser, lager, frakt og rabattkoder styres i PolarCode-portalen, og ordrene dukker opp der.",
+      images: [
+        { src: "/images/eksempler/nettbutikk/nettbutikk_front_1.png", width: 600, height: 400 },
+        { src: "/images/eksempler/nettbutikk/nettbutikk_front_2.png", width: 600, height: 400 },
+        { src: "/images/eksempler/nettbutikk/nettbutikk_front_3.png", width: 600, height: 400 },
+        { src: "/images/eksempler/nettbutikk/nettbutikk_front_4.png", width: 600, height: 400 },
+      ],
+      link: "https://nettbutikk.polarcode.solutions/",
       alignRight: true,
     },
   ];
