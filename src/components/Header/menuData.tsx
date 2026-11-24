@@ -20,6 +20,18 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 8,
+    title: "Portalen",
+    path: "/portalen",
+    newTab: false,
+  },
+  {
+    id: 7,
+    title: "PolarTQR",
+    path: "/polartqr",
+    newTab: false,
+  },
+  {
     id: 4,
     title: "Våre design",
     path: "/eksempler",
