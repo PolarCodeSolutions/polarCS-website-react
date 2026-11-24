@@ -59,7 +59,7 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-          <div className="w-60 max-w-full px-4 xl:mr-12">
+          <div className="max-w-full flex-none px-4 xl:mr-8">
             <Link
               href="/"
               className={`header-logo block w-full ${
@@ -112,14 +112,14 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-5 xl:space-x-8 2xl:space-x-12">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
                             onClick={handleLinkClick}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex whitespace-nowrap py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-[15px] xl:text-base ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -171,7 +171,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 {/* Kundene finner innloggingen til portalen her, også om de ikke har bokmerket den */}
                 <a href="https://portal.polarcode.solutions"
-                  className="mr-3 hidden whitespace-nowrap rounded-md bg-primary px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90 sm:inline-block">
+                  className="mr-3 hidden whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90 sm:inline-block xl:px-5">
                   Logg inn
                 </a>
                 <div>
