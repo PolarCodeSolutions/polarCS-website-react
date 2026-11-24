@@ -27,7 +27,7 @@ const menuData: Menu[] = [
   },
   {
     id: 7,
-    title: "Billetter",
+    title: "PolarTQR",
     path: "/polartqr",
     newTab: false,
   },
