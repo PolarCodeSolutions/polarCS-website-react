@@ -81,5 +81,35 @@ const blogData: Blog[] = [
     publishDate: "2024",
     
   },
+  {
+    id: 6,
+    url: "https://polarcode.solutions/polartqr",
+    lenke: "polartqr",
+    title: "Billetter og billettkontroll med PolarTQR",
+    paragraph: "Selg billetter på nettsiden med Vipps eller kort, og sjekk inn gjestene i døra med appen PolarTQR.",
+    image: "/images/tjenester/polartqr.webp",
+    author: {
+      name: "Asgeir Bjørgen Huskebakk",
+      image: "/images/blog/asgeir.jpg",
+      designation: "Programvare ingeniør",
+    },
+    tags: ["Billetter"],
+    publishDate: "2026",
+  },
+  {
+    id: 7,
+    url: "https://polarcode.solutions/portalen",
+    lenke: "portalen",
+    title: "PolarCode-portalen: styr nettsiden selv",
+    paragraph: "Sider, arrangementer, billetter, nyhetsbrev, sponsorer og nettbutikk – alt endres i portalen.",
+    image: "/images/portalen/oversikt.webp",
+    author: {
+      name: "Morten Sandstedt",
+      image: "/images/blog/morten.png",
+      designation: "Webdesign og utvikler",
+    },
+    tags: ["Portalen"],
+    publishDate: "2026",
+  },
 ];
 export default blogData;
