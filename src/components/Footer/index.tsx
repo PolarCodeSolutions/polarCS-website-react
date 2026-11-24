@@ -1,257 +1,112 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import React from 'react';
+import React from "react";
 import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
   FacebookIcon,
   TwitterIcon,
-  LinkedinIcon
-} from 'react-share';
+  LinkedinIcon,
+} from "react-share";
 
 const url = "https://polarcode.solutions/";
 const title = "Profesjonell Webdesign og Programvareutvikling | PolarCode Solutions";
+
+const COLUMNS: { title: string; links: { href: string; label: string; external?: boolean }[] }[] = [
+  {
+    title: "Tjenester",
+    links: [
+      { href: "/tjenester/webdesign", label: "Webdesign" },
+      { href: "/tjenester/programvare", label: "Programvareutvikling" },
+      { href: "/tjenester/webhosting", label: "Hosting" },
+      { href: "/tjenester/vedlikehold", label: "Vedlikehold" },
+      { href: "/tjenester", label: "Alle tjenester" },
+    ],
+  },
+  {
+    title: "Produkter",
+    links: [
+      { href: "/portalen", label: "PolarCode-portalen" },
+      { href: "/polartqr", label: "Billetter og PolarTQR" },
+      { href: "/eksempler", label: "Våre design" },
+      { href: "/portfolio", label: "Portefølje" },
+      { href: "/om", label: "Om oss" },
+    ],
+  },
+  {
+    title: "Hjelp og vilkår",
+    links: [
+      { href: "/kontakt", label: "Kontakt oss" },
+      { href: "/personvern", label: "Personvern" },
+      { href: "/vilkar", label: "Vilkår for bruk" },
+      { href: "/databehandleravtale", label: "Databehandleravtale" },
+    ],
+  },
+];
+
+const linkClass = "text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary";
 
 const Footer = () => {
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
-                  <img
-                    src="/images/logo/croppedPolarLogo.png"
-                    alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
-                  />
-                  <img
-                    src="/images/logo/croppedPolarLogo.png"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
-                  />
-                </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Kode, direkte fra kilden av nordlyset.
-                </p>
-                <div className="flex items-center">
-                 
-                </div>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-12 pb-12 md:grid-cols-4 xl:grid-cols-12 lg:pb-16">
+            {/* Om PolarCode */}
+            <div className="col-span-2 md:col-span-4 xl:col-span-3">
+              <Link href="/" className="mb-6 inline-flex items-center gap-3">
+                <img src="/images/logo/croppedPolarLogo.png" alt="PolarCode Solutions" width={56} height={56} className="h-14 w-14" />
+                <span className="text-xl font-bold text-black dark:text-white">PolarCode Solutions</span>
+              </Link>
+              <p className="mb-6 max-w-[340px] text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                Kode, direkte fra kilden av nordlyset. Nettsider, nettbutikker og billettsystem for bedrifter, lag og foreninger.
+              </p>
+              <a href="https://portal.polarcode.solutions"
+                className="mb-8 inline-block rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90">
+                Logg inn i portalen
+              </a>
+              <div className="flex items-center gap-5">
+                <a href="https://www.facebook.com/profile.php?id=61560407736033" aria-label="PolarCode på Facebook" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/icons/metaIcon.png" alt="" width={34} height={18} />
+                </a>
+                <a href="https://discord.gg/hUAksuANZ4" aria-label="PolarCode på Discord" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/icons/discordIcon.png" alt="" width={36} height={18} />
+                </a>
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Raske lenker
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/tjenester/webdesign"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Utforsk Webdesign-løsninger
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/tjenester/programvare"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Se våre Programvareutviklingstjenester
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/tjenester/webhosting"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Utforsk hosting-løsninger
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/tjenester/vedlikehold"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Les om Vedlikeholdstjenester
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/tjenester"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Se alle tjenester
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/om"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Les om vår visjon
-                    </Link>
-                  </li>
-                  <li>
-                  
-              <div className="mb-12 lg:mb-16">
-                <p>
-                  <b>Del oss med andre</b>
-                </p>
-                <ul>
-                <div>
-                  <FacebookShareButton url={url} title={title}>
-                    <FacebookIcon size={32} round />
-                  </FacebookShareButton>
-                  <TwitterShareButton url={url} title={title}>
-                    <TwitterIcon size={32} round />
-                  </TwitterShareButton>
-                  <LinkedinShareButton url={url} title={title}>
-                    <LinkedinIcon size={32} round />
-                  </LinkedinShareButton>
-                </div>
+            {COLUMNS.map((col) => (
+              <div key={col.title} className="xl:col-span-2">
+                <h2 className="mb-6 text-lg font-bold text-black dark:text-white">{col.title}</h2>
+                <ul className="space-y-3">
+                  {col.links.map((l) => (
+                    <li key={l.href}><Link href={l.href} className={linkClass}>{l.label}</Link></li>
+                  ))}
                 </ul>
               </div>
-        
-                  </li>
-  
-                </ul>
+            ))}
 
+            {/* Kontakt */}
+            <div className="xl:col-span-3">
+              <h2 className="mb-6 text-lg font-bold text-black dark:text-white">Kontakt</h2>
+              <ul className="space-y-3">
+                <li><a href="tel:+4795044586" className={linkClass}>+47 950 44 586</a></li>
+                <li><a href="mailto:contact@polarcode.solutions" className={linkClass}>contact@<wbr />polarcode.solutions</a></li>
+                <li className="text-base text-body-color dark:text-body-color-dark">Mo i Rana, Nordland</li>
+              </ul>
+              <p className="mb-3 mt-6 text-sm font-semibold text-black dark:text-white">Del oss med andre</p>
+              <div className="flex gap-2">
+                <FacebookShareButton url={url} title={title} aria-label="Del på Facebook"><FacebookIcon size={30} round /></FacebookShareButton>
+                <TwitterShareButton url={url} title={title} aria-label="Del på X"><TwitterIcon size={30} round /></TwitterShareButton>
+                <LinkedinShareButton url={url} title={title} aria-label="Del på LinkedIn"><LinkedinIcon size={30} round /></LinkedinShareButton>
               </div>
             </div>
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Hjelp og spørsmål
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/kontakt"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Send inn skjema
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/personvern"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Personvern
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/vilkar"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Vilkår for bruk
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/databehandleravtale"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Databehandleravtale
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Kontakt informasjon
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/kontakt"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      +47 950 44 586
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/kontakt"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      contact@polarcode.solutions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://polarcode.solutions/kontakt"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Mo i Rana, Nordland, Norge
-                    </Link>
-                  </li>
-                  <li>
-                  <div className="mb-12 lg:mb-16">
-                    <p>
-                      <b>Sosiale medier</b>
-                    </p>
-                    <ul>
-                      <div className="flex space-x-6">
-                        <a 
-                          href="https://www.facebook.com/profile.php?id=61560407736033"
-                          aria-label="social-link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                        >
-                          <img
-                            src="/images/icons/metaIcon.png"
-                            alt="Ikon"
-                            width="40"
-                            height="18"
-                          />
-                        </a>
-                        <a
-                          href="https://discord.gg/hUAksuANZ4"
-                          aria-label="social-link"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                        >
-                          <img
-                            src="/images/icons/discordIcon.png"
-                            alt="Ikon"
-                            width="50"
-                            height="18"
-                          />
-                        </a>
-                      </div>
-                    </ul>
-                  </div>
-
-                        
-                
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-
-            
           </div>
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
-          <p className="text-center text-base text-body-color dark:text-white">
-              Utviklet av <a href="https://polarcode.solutions">PolarCodeSolutions</a>  © 2024 med kjærlighet for koden.
+            <p className="text-center text-base text-body-color dark:text-body-color-dark">
+              © {new Date().getFullYear()} PolarCode Solutions – utviklet med kjærlighet for koden.
             </p>
           </div>
         </div>
