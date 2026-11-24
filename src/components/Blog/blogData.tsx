@@ -93,7 +93,7 @@ const blogData: Blog[] = [
       image: "/images/blog/asgeir.jpg",
       designation: "Programvare ingeniør",
     },
-    tags: ["Billetter"],
+    tags: ["PolarTQR"],
     publishDate: "2026",
   },
   {
@@ -102,7 +102,7 @@ const blogData: Blog[] = [
     lenke: "portalen",
     title: "PolarCode-portalen: styr nettsiden selv",
     paragraph: "Sider, arrangementer, billetter, nyhetsbrev, sponsorer og nettbutikk – alt endres i portalen.",
-    image: "/images/portalen/oversikt.webp",
+    image: "/images/tjenester/portalen.webp",
     author: {
       name: "Morten Sandstedt",
       image: "/images/blog/morten.png",
